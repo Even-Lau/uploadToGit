@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06发布话题</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="style/layout.css">
+    <style>
+        html,body{
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="tk_complain">
+    <!--<header class="tk_compHeader">
+        <div class="tk_compHBack"></div>
+        <h3 class="tk_compHTitle">发布话题</h3>
+        <div class="tk_compHMore"></div>
+    </header>-->
+    <ul class="tk_compMenu">
+        <li class="tk_compItem clear">
+            <span class="tk_compItemN">发布人</span>
+            <span class="tk_compItemD">小明同学</span>
+        </li>
+        <li class="tk_compItem clear">
+            <span class="tk_compItemN">话题类型</span>
+            <span class="tk_compItemD">生活</span>
+        </li>
+        <li class="tk_compItem clear">
+            <span class="tk_compItemN">话题名称</span>
+            <span class="tk_compItemD">踏秋走起</span>
+        </li>
+    </ul>
+    <section class="tk_compCont">
+        <div class="RTopCTxaWrapper">
+            <textarea class="tk_compCTxa" placeholder="请输入话题内容"></textarea>
+            <span class="tk_compCNum">0/200</span>
+        </div>
+    </section>
+    <section class="tk_RTopPicWrapper">
+        <div class="tk_RTopPicTitle">发布照片</div>
+        <ul class="tk_RTopPicMenu clear">
+            <!--<li class="tk_RTopPicItem">
+                <div class="tk_RTopPicItDelete"></div>
+            </li>-->
+            <li class="tk_RTopPicItem tk_RTopPicItIpt">
+                <div class="tk_RTopPicItIptIcon"></div>
+                <div class="tk_RTopPicItIptTxt">上传照片</div>
+                <input type="file" class="tk_RTopPicItIptInput" multiple>
+            </li>
+        </ul>
+    </section>
+    <footer class="tk_compBtnWrapper">
+        <div class="tk_compBtn">提交</div>
+    </footer>
+</div>
+
+<div class="tk_compPopUpWrapper none">
+    <div class="tk_compPopUp">
+        <div class="tk_compPopUpMsg">照片数量不能超过8张！</div>
+        <div class="tk_compPopUpBtnWrapper">
+            <div class="tk_compPopUpBtn">确定</div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script>
+
+    $(".tk_compCTxa").focus(function () {
+        $(".tk_compCTxa").siblings(".tk_compCNum").addClass("none")
+    });
+
+    /*点击camera按钮*/
+    var input = document.querySelector('.tk_RTopPicItIptInput');
+    var preview = document.querySelector('.tk_RTopPicMenu');
+    var tk_RTopPicItIpt = document.querySelector('.tk_RTopPicItIpt');
+
+    input.addEventListener('change', updateImageDisplay);
+    function updateImageDisplay() {
+        var curFiles = input.files;
+        if (curFiles.length === 0) {
+            /*var para = document.createElement('li');
+            para.classList.add("tk_compPicItMsg");
+            para.textContent = 'No files currently selected for upload';
+            preview.appendChild(para);*/
+
+        } else if (curFiles.length > 8) {
+            /*判断数量*/
+            $(".tk_compPopUpWrapper").removeClass("none");
+            $(".tk_compPicItMsg").removeClass("none");
+        } else {
+            /*判断数量*/
+            console.log($(".tk_RTopPicItem").length);
+            console.log(curFiles.length)
+            if ($(".tk_RTopPicItem").length + curFiles.length > 9) {
+                $(".tk_compPopUpWrapper").removeClass("none");
+                return;
+            } else {
+                for (var i = 0; i < curFiles.length; i++) {
+                    var listItemDelete = document.createElement('div');
+                    listItemDelete.classList.add("tk_RTopPicItDelete");
+                    var listItem = document.createElement('li');
+                    listItem.classList.add("tk_RTopPicItem");
+                    var para = document.createElement('p');
+                    if (validFileType(curFiles[i])) {
+                        /*para.textContent = 'File name ' + curFiles[i].name + ', file size ' + returnFileSize(curFiles[i].size) + '.';*/
+                        /*var image = document.createElement('img');*/
+                        listItem.style.backgroundImage = "url(" + window.URL.createObjectURL(curFiles[i]) + ")";
+
+                    } /*else {
+                        para.textContent = 'File name ' + curFiles[i].name + ': Not a valid file type. Update your selection.';
+                        listItem.appendChild(para);
+                    }*/;
+
+                    listItem.appendChild(listItemDelete);
+                    preview.insertBefore(listItem,tk_RTopPicItIpt);
+
+                }
+            };
+
+        }
+    };
+    var fileTypes = [
+        'image/jpeg',
+        'image/pjpeg',
+        'image/png'
+    ];
+
+    function validFileType(file) {
+        for (var i = 0; i < fileTypes.length; i++) {
+            if (file.type === fileTypes[i]) {
+                return true;
+            }
+        }
+        return false;
+    };
+    /*删除图片*/
+    $(".tk_RTopPicMenu").on("click",".tk_RTopPicItDelete",function () {
+        $(this).parents(".tk_RTopPicItem").remove()
+    });
+    /*关闭弹窗*/
+    $(".tk_compPopUpBtn").click(function () {
+        $(this).parents(".tk_compPopUpWrapper").addClass("none")
+    })
+</script>
+</body>
+</html>

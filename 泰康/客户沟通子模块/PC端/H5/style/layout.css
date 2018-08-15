@@ -1,0 +1,184 @@
+html {
+    color: #000;
+    background: #fff;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+}
+
+html * {
+    outline: 0;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    position: relative;
+}
+
+html, body {
+    font-family: '微软雅黑', "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    line-height: 1;
+    font-size: 0.3rem;
+    color: #333;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+
+input, select, textarea {
+    font-size: 100%
+}
+
+input, textarea {
+    border: none;
+}
+
+textarea {
+    resize: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+fieldset, img {
+    border: 0
+}
+
+img {
+    display: block;
+}
+
+address, caption, cite, code, dfn, em, th, var {
+    font-style: normal;
+    font-weight: 500
+}
+
+ol, ul {
+    list-style: none
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: 500
+}
+
+a {
+    text-decoration: none
+}
+
+.clear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.none {
+    display: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/***************************************************首页***************************************************************/
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.fm_carnival{
+    width: 100%;
+    /*height: 1080px;*/
+    height: 100%;
+    background-image: url("../images/carnival_bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.fm_carnivalAR{
+    /*width: 957px;
+    height: 533px;*/
+    width: 49.84375%;
+    height: 49.35185185185185%;
+    background-image: url("../images/carnival.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    /*top: 94px;*/
+    top: 8.7037037037037%;
+    /*margin-left: -478px;*/
+    margin-left: -24.921875%;
+}
+.fm_carTitleWrapper{
+    width: 658px;
+    height: 127px;
+    background-image: url("../images/title-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    /*top: 560px;*/
+    top: 51.85185185185185%;
+    z-index: 2;
+    margin-left: -329px;
+    padding-top: 18px;
+    padding-left: 14px;
+}
+.fm_carTitle{
+    width: 630px;
+    height: 84px;
+    line-height: 84px;
+    text-align: center;
+    border-radius: 52px;
+    color: #fff;
+
+    font-size: 46px;
+}
+.fm_carTitleB{
+    font-weight: bold;
+}
+.fm_carTimeWrapper{
+    width: 1083px;
+    height: 177px;
+    background-image: url("../images/time-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    /*top: 760px;*/
+    top: 70.37037037037037%;
+    margin-left: -541px;
+}
+.fm_carDays,.fm_carHours,.fm_carMinutes,.fm_carSeconds{
+    width: 164px;
+    height: 164px;
+    line-height: 164px;
+    text-align: center;
+    float: left;
+    margin-right: 117px;
+    font-size: 94px;
+    color: #fff;
+}
+.fm_carHours{
+    margin-right: 108px;
+}
+.fm_carMinutes{
+    margin-right: 125px;
+}
+.fm_carSeconds{
+    margin-right: 0;
+}

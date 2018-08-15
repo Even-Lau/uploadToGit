@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>申请信息-待评价</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="style/layout.css">
+    <!-- Core CSS file -->
+    <link rel="stylesheet" href="style/photoswipe.css">
+
+    <!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+         In the folder of skin CSS file there are also:
+         - .png and .svg icons sprite,
+         - preloader.gif (for browsers that do not support CSS animations) -->
+    <link rel="stylesheet" href="style/default-skin/default-skin.css">
+</head>
+<body>
+<div class="tk_vM">
+
+    <ul class="tk_pMLMenu">
+        <li class="tk_pMLItem clear">
+            <span class="tk_compItemN"><span class="tk_compItNStar">*</span>申请人姓名</span>
+            <input class="tk_pMDItemDIpt" type="text" placeholder="请输入">
+        </li>
+        <li class="tk_pMLItem clear">
+            <span class="tk_compItemN"><span class="tk_compItNStar">*</span>手机号码</span>
+            <input class="tk_pMDItemDIpt" type="text" placeholder="请输入">
+        </li>
+        <li class="tk_pMLItem clear">
+            <span class="tk_compItemN">所在部门</span>
+            <div class="tk_compItemC">
+                <span class="tk_compItemCTxt">请选择</span>
+                <div class="tk_compItCIcon"></div>
+            </div>
+            <div class="tk_compPopUp2Wrapper none">
+                <div class="tk_compPopUp2">
+                    <div class="tk_compPopUp2Title">部门选择</div>
+                    <ul class="tk_compPopUp2Menu">
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">部门一</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="department" value="部门一">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">部门二</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="department" value="部门二">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">部门三</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="department" value="部门三">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">部门四</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="department" value="部门四">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">部门五</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="department" value="部门五">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">部门六</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="department" value="部门六">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">状态七</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="department" value="类型七">
+                        </li>
+                    </ul>
+                    <div class="tk_compPopUp2BtnWrapper">
+                        <div class="tk_compPopUp2Btn fl">确定</div>
+                        <div class="tk_compPopUp2Btn fr">关闭</div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="tk_pMLItem clear">
+            <span class="tk_compItemN"><span class="tk_compItNStar">*</span>所在楼栋</span>
+            <div class="tk_compItemC">
+                <span class="tk_compItemCTxt">请选择（必填）</span>
+                <div class="tk_compItCIcon"></div>
+            </div>
+            <div class="tk_compPopUp2Wrapper none">
+                <div class="tk_compPopUp2">
+                    <div class="tk_compPopUp2Title">楼栋选择</div>
+                    <ul class="tk_compPopUp2Menu">
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">楼栋一</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="building" value="楼栋一">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">楼栋二</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="building" value="楼栋二">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">楼栋三</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="building" value="楼栋三">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">楼栋四</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="building" value="楼栋四">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">楼栋五</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="building" value="楼栋五">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">楼栋六</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="building" value="楼栋六">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">状态七</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="building" value="类型七">
+                        </li>
+                    </ul>
+                    <div class="tk_compPopUp2BtnWrapper">
+                        <div class="tk_compPopUp2Btn fl">确定</div>
+                        <div class="tk_compPopUp2Btn fr">关闭</div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="tk_pMLItem clear">
+            <span class="tk_compItemN"><span class="tk_compItNStar">*</span>所在楼层</span>
+            <div class="tk_compItemC">
+                <span class="tk_compItemCTxt">请选择（必填）</span>
+                <div class="tk_compItCIcon"></div>
+            </div>
+            <div class="tk_compPopUp2Wrapper none">
+                <div class="tk_compPopUp2">
+                    <div class="tk_compPopUp2Title">楼层选择</div>
+                    <ul class="tk_compPopUp2Menu">
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">楼层一</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="floor" value="楼层一">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">楼层二</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="floor" value="楼层二">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">楼层三</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="floor" value="楼层三">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">楼层四</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="floor" value="楼层四">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">楼层五</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="floor" value="楼层五">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">楼层六</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="floor" value="楼层六">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">状态七</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="building" value="类型七">
+                        </li>
+                    </ul>
+                    <div class="tk_compPopUp2BtnWrapper">
+                        <div class="tk_compPopUp2Btn fl">确定</div>
+                        <div class="tk_compPopUp2Btn fr">关闭</div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="tk_pMLItem clear">
+            <span class="tk_compItemN">具体位置</span>
+            <input class="tk_pMDItemDIpt" type="text" placeholder="请输入">
+        </li>
+    </ul>
+    <ul class="tk_topTContent">
+        <li class="tk_MCConItem5">
+            <a class="tk_MCConItHref2" href="javascript:;">
+                <div class="tk_MCConItTop clear">
+                    <div class="tk_MCConItTitle"><span class="tk_compItNStar">*</span>故障描述</div>
+                </div>
+                <ul class="tk_MCConItMenu">
+                    <li class="tk_MCConItItem">
+                        <!--<p class="tk_MCConItPara">主机风扇照常转，键盘灯一起亮了一下然后再也没反 应，显示屏显没信号后、下面的灯变成红的，也没有 反应了，怎么办</p>-->
+                        <textarea class="tk_compCTxa" placeholder="故障描述最少10个字（必填）"></textarea>
+                    </li>
+                </ul>
+            </a>
+        </li>
+
+        <li class="tk_MCConItem5">
+            <a class="tk_MCConItHref2" href="javascript:;">
+                <div class="tk_MCConItTop clear">
+                    <div class="tk_MCConItTitle">上传故障图片</div>
+                </div>
+                <ul class="tk_RTopPicMenu clear" style="padding-top: 0.25rem">
+                    <li class="tk_RTopPicItem tk_RTopPicItIpt">
+                        <div class="tk_RTopPicItIptIcon"></div>
+                        <div class="tk_RTopPicItIptTxt">上传照片</div>
+                        <input type="file" class="tk_RTopPicItIptInput" multiple accept="image/*">
+                    </li>
+                </ul>
+            </a>
+        </li>
+        <li class="tk_MCConItem5">
+            <a class="tk_MCConItHref2" href="javascript:;">
+                <div class="tk_MCConItTop clear">
+                    <div class="tk_MCConItTitle">资产信息</div>
+                </div>
+                <ul class="tk_MCConItMenu">
+                    <li class="tk_MCConItItem">
+                        <p class="tk_MCConItPara">资产信息内容预展示</p>
+                    </li>
+                </ul>
+            </a>
+        </li>
+        <li class="tk_MCConItem5">
+            <a class="tk_MCConItHref2" href="javascript:;">
+                <div class="tk_MCConItTop clear">
+                    <div class="tk_MCConItTitle">客户评价</div>
+                </div>
+                <div class="tk_MCConItMenu">
+                    <div class="tk_MCCItStateWrap clear">
+                        <div class="tk_MCCItState satisfy0 fl current">
+                            <!--<i class="tk_MCCItStIcon"></i>-->
+                            <span>非常满意</span>
+                            <input class="tk_MCCItStIpt" type="radio" name="satisfy">
+                        </div>
+                        <div class="tk_MCCItState satisfy fl">
+                            <span>满意</span>
+                            <input class="tk_MCCItStIpt" type="radio" name="satisfy">
+                        </div>
+                        <div class="tk_MCCItState general fl">
+                            <span>一般</span>
+                            <input class="tk_MCCItStIpt" type="radio" name="satisfy">
+                        </div>
+                        <div class="tk_MCCItState disappoint fr">
+                            <span>不满意</span>
+                            <input class="tk_MCCItStIpt" type="radio" name="satisfy">
+                        </div>
+                    </div>
+                </div>
+                <ul class="tk_MCConItMenu2">
+                    <li class="tk_MCConItItem2">
+                        <!--<p class="tk_MCConItPara">周到，热情，细心良好，很满意</p>-->
+                        <textarea class="tk_aITCTxa" placeholder="请输入评论"></textarea>
+                    </li>
+                </ul>
+            </a>
+        </li>
+        <!--<li class="tk_MCConItem5">
+            <a class="tk_MCConItHref2" href="javascript:;">
+                <div class="tk_MCConItTop clear">
+                    <div class="tk_MCConItTitle">客户评价</div>
+                    <div class="tk_MCCItStateWrap clear">
+                        <div class="tk_MCCItState satisfy fl">
+                            <i class="tk_MCCItStIcon"></i>
+                            <span>满意</span>
+                            <input class="tk_MCCItStIpt" type="radio" name="satisfy">
+                        </div>
+                        <div class="tk_MCCItState disappoint fr">
+                            <i class="tk_MCCItStIcon"></i>
+                            <span>不满意</span>
+                            <input class="tk_MCCItStIpt" type="radio" name="satisfy">
+                        </div>
+                    </div>
+                </div>
+                <ul class="tk_MCConItMenu">
+                    <li class="tk_MCConItItem">
+                        <p class="tk_MCConItPara">周到，热情，细心良好，很满意</p>
+                    </li>
+                </ul>
+            </a>
+        </li>-->
+    </ul>
+    <footer class="tk_compBtnWrapper">
+        <button class="tk_compBtn" type="button">提交</button>
+    </footer>
+</div>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <!--<button class="pswp__button pswp__button&#45;&#45;share" title="Share"></button>
+
+                <button class="pswp__button pswp__button&#45;&#45;fs" title="Toggle fullscreen"></button>-->
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption none">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<!-- Core JS file -->
+<script src="js/photoswipe.min.js"></script>
+<!-- UI JS file -->
+<script src="js/photoswipe-ui-default.min.js"></script>
+<script>
+    var openPhotoSwipe = function () {
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+
+        // build items array
+        var items = [
+            {
+                src: 'images/birthday-pop-up.png',
+                w: 600,
+                h: 600,
+
+                /*msrc: 'images/question-section-position-image.png', // small image placeholder,
+                 // main (large) image loads on top of it,
+                 // if you skip this parameter - grey rectangle will be displayed,
+                 // try to define this property only when small image was loaded before
+
+
+
+                 title: 'Image Caption'  // used by Default PhotoSwipe UI
+                 // if you skip it, there won't be any caption
+
+
+                 // You may add more properties here and use them.
+                 // For example, demo gallery uses "author" property, which is used in the caption.
+                 // author: 'John Doe'*/
+            },
+            {
+                src: 'images/preview-img.png',
+                w: 1200,
+                h: 900
+            },
+            {
+                src: 'images/wt-VIP-invitation-wrapper-bg.png',
+                w: 1200,
+                h: 8000
+            }
+        ];
+
+        // define options (if needed)
+        var options = {
+            // optionName: 'option value'
+            // for example:
+            index: 0, // start at first slide
+            tapToClose: true,
+            showHideOpacity: false,
+            showAnimationDuration: 0
+        };
+
+        // Initializes and opens PhotoSwipe
+        var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+        gallery.init();
+    };
+    /*openPhotoSwipe();*/
+    $(".tk_RTopPicMenu").on("click",".tk_RTopPicItem_img",function () {
+        openPhotoSwipe();
+
+    });
+</script>
+<script>
+    $(".tk_compItemC").click(function () {
+        $(this).siblings(".tk_compPopUp2Wrapper").removeClass("none")
+    });
+    $(".tk_compPopUp2Btn:nth-child(1)").click(function () {
+        var iptValue=$(this).parents(".tk_compPopUp2").find(".tk_compPopUp2ItIpt:checked").val();
+        $(this).parents(".tk_pMLItem").find(".tk_compItemCTxt").text(iptValue).addClass("on");
+        $(this).parents(".tk_compPopUp2Wrapper").addClass("none")
+    });
+    $(".tk_compPopUp2Btn:nth-child(2)").click(function () {
+        $(this).parents(".tk_compPopUp2Wrapper").addClass("none")
+    });
+    $(".tk_compItCItem").click(function () {
+        $(this).parents(".tk_compItCMenu").slideUp();
+        $(this).parents(".tk_compItCMenu").siblings(".tk_compItemC").children(".tk_compItemCTxt").text($(this).text()).addClass("on");
+    });
+    $(".tk_pMLPUpTitIcon").click(function () {
+        $(this).parents(".tk_pMLPopUpWrapper").addClass("none")
+    });
+
+
+
+
+    /*点击camera按钮*/
+    var input = document.querySelector('.tk_RTopPicItIptInput');
+    var preview = document.querySelector('.tk_RTopPicMenu');
+    var tk_RTopPicItIpt = document.querySelector('.tk_RTopPicItIpt');
+
+    input.addEventListener('change', updateImageDisplay);
+    function updateImageDisplay() {
+        var curFiles = input.files;
+        if (curFiles.length === 0) {
+            /*var para = document.createElement('li');
+             para.classList.add("tk_compPicItMsg");
+             para.textContent = 'No files currently selected for upload';
+             preview.appendChild(para);*/
+
+        } else if (curFiles.length > 8) {
+            /*判断数量*/
+            $(".tk_compPopUpWrapper").removeClass("none");
+            $(".tk_compPicItMsg").removeClass("none");
+        } else {
+            /*判断数量*/
+            console.log($(".tk_RTopPicItem").length);
+            console.log(curFiles.length)
+            if ($(".tk_RTopPicItem").length + curFiles.length > 9) {
+                $(".tk_compPopUpWrapper").removeClass("none");
+                return;
+            } else {
+                for (var i = 0; i < curFiles.length; i++) {
+                    var listItemDelete = document.createElement('div');
+                    listItemDelete.classList.add("tk_RTopPicItDelete");
+                    var listItem = document.createElement('li');
+                    listItem.classList.add("tk_RTopPicItem");
+                    listItem.classList.add("tk_RTopPicItem_img");
+                    var para = document.createElement('p');
+                    if (validFileType(curFiles[i])) {
+                        /*para.textContent = 'File name ' + curFiles[i].name + ', file size ' + returnFileSize(curFiles[i].size) + '.';*/
+                        /*var image = document.createElement('img');*/
+                        listItem.style.backgroundImage = "url(" + window.URL.createObjectURL(curFiles[i]) + ")";
+
+                    } /*else {
+                     para.textContent = 'File name ' + curFiles[i].name + ': Not a valid file type. Update your selection.';
+                     listItem.appendChild(para);
+                     }*/;
+
+                    listItem.appendChild(listItemDelete);
+                    preview.insertBefore(listItem,tk_RTopPicItIpt);
+
+                }
+            };
+
+        }
+    };
+    var fileTypes = [
+        'image/jpeg',
+        'image/pjpeg',
+        'image/png'
+    ];
+
+    function validFileType(file) {
+        for (var i = 0; i < fileTypes.length; i++) {
+            if (file.type === fileTypes[i]) {
+                return true;
+            }
+        }
+        return false;
+    };
+    //判断设备类型，动态添加capture属性：
+    function getMobileOperatingSystem() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/android/i.test(userAgent)) {
+            console.log("android");
+            $(".tk_RTopPicItIptInput").attr("capture","camera");
+        };
+
+        if ((/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream)||/android 7.0/i.test(userAgent)) {
+            console.log("iOS");
+            $(".tk_RTopPicItIptInput").removeAttr("capture");
+        };
+
+        return "unknown";
+    };
+    getMobileOperatingSystem();
+    /*删除图片*/
+    $(".tk_RTopPicMenu").on("click",".tk_RTopPicItDelete",function (event) {
+        event.stopPropagation();
+        $(this).parents(".tk_RTopPicItem").remove()
+    });
+    /*关闭弹窗*/
+    $(".tk_compPopUpBtn").click(function () {
+        $(this).parents(".tk_compPopUpWrapper").addClass("none")
+    });
+    /*满意不满意切换*/
+    $(".tk_MCCItStIpt").change(function () {
+        var thisParent=$(this).parents(".tk_MCCItState");
+        if(thisParent.hasClass("current")){
+            thisParent.removeClass("current");
+            thisParent.siblings(".tk_MCCItState").addClass("current");
+        }else{
+            thisParent.addClass("current");
+            thisParent.siblings(".tk_MCCItState").removeClass("current");
+        };
+        if($(this).parents(".disappoint").length==1 && $(this).prop("checked")){
+            $(".tk_aITCTxa").attr("placeholder", "评价最少10个字（必填）");
+        }else {
+            $(".tk_aITCTxa").attr("placeholder", "请输入评论");
+        }
+    });
+
+</script>
+</body>
+</html>

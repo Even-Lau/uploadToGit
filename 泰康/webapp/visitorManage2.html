@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>访客管理列表2</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="style/layout.css">
+    <style>
+        html,body{
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="tk_myComplain">
+    <!--<header class="tk_compHeader">
+        <div class="tk_compHBack"></div>
+        <h3 class="tk_compHTitle">我的投诉</h3>
+        <div class="tk_compHMore"></div>
+    </header>-->
+    <ul class="tk_mCTabWrapper2 clear">
+        <li class="tk_mCTab2 on">全部</li>
+        <li class="tk_mCTab2">待确认</li>
+        <li class="tk_mCTab2">已确认</li>
+        <li class="tk_mCTab2">已审批</li>
+    </ul>
+    <ul class="tk_topTContent">
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">张三的来访申请，访问时间2018年1月9日</span>
+                <!--<span class="tk_MCConItTxt">05-23</span>-->
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">张三的来访申请，访问时间2018年1月9日</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">张三的来访申请，访问时间2018年1月9日</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">张三的来访申请，访问时间2018年1月9日</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">张三的来访申请，访问时间2018年1月9日</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">张三的来访申请，访问时间2018年1月9日</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">张三的来访申请，访问时间2018年1月9日</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+    </ul>
+    <footer class="tk_MCFootWrapper">
+        <div class="tk_MCFoot">
+            <div class="tk_MCFTxtWrapper">
+                <div class="tk_MCFIcon"></div>
+                <div class="tk_MCFTxt">添加申请</div>
+            </div>
+        </div>
+    </footer>
+</div>
+<div class="tk_vMPopUpWrapper none">
+    <div class="tk_vMPopUp">
+        <div class="tk_vMPopUpTit">新建受访申请</div>
+        <div class="tk_vMPopUpBtnWrapper clear">
+            <a class="tk_vMPopUpBtnN" href="javascript:;">普通新建</a>
+            <a class="tk_vMPopUpBtnF" href="javascript:;">常用访客新建</a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script>
+    $(".tk_mCTab2").click(function () {
+        $(this).addClass("on").siblings().removeClass("on");
+    });
+    $(".tk_MCFoot").click(function () {
+        $(".tk_vMPopUpWrapper").removeClass("none");
+    });
+</script>
+</body>
+</html>

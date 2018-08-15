@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_02投诉表扬-投诉审核</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="style/layout.css">
+    <!-- Core CSS file -->
+    <link rel="stylesheet" href="style/photoswipe.css">
+
+    <!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+         In the folder of skin CSS file there are also:
+         - .png and .svg icons sprite,
+         - preloader.gif (for browsers that do not support CSS animations) -->
+    <link rel="stylesheet" href="style/default-skin/default-skin.css">
+
+    <!-- Core JS file -->
+    <script src="js/photoswipe.min.js"></script>
+
+    <!-- UI JS file -->
+    <script src="js/photoswipe-ui-default.min.js"></script>
+    <style>
+        .pswp__top-bar {
+            height: 0.587rem;
+            text-align: center;
+            line-height: 0.587rem;
+            position: relative;
+        }
+
+        .pswp__counter {
+            position: relative;
+            width: 2rem;
+            height: 100%;
+            line-height: 0.587rem;
+            font-size: 0.30rem;
+            color: #FFF;
+            opacity: 0.75;
+            margin: 0 auto;
+        }
+
+        .pswp__top-bar .pswp__button--close {
+            width: 0.587rem;
+            height: 0.587rem;
+            background-image: url("images/delete2.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 70%;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .pswp__preloader {
+            display: none;
+        }
+
+        .fullscreen {
+            object-position: center center;
+            background-color: #000;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+<div class="tk_complainC">
+    <!--<header class="tk_compHeader">
+        <div class="tk_compHBack"></div>
+        <h3 class="tk_compHTitle">投诉详情</h3>
+        <div class="tk_compHMore"></div>
+    </header>-->
+    <ul class="tk_compMenu">
+        <li class="tk_compItem clear">
+            <span class="tk_compItemN">投诉人</span>
+            <span class="tk_compItemD">小明同学</span>
+        </li>
+        <li class="tk_compItem clear">
+            <span class="tk_compItemN">联系电话</span>
+            <span class="tk_compItemD">13800138000</span>
+        </li>
+        <li class="tk_compItem clear">
+            <span class="tk_compItemN">投诉类型</span>
+            <span class="tk_compItemD">一般</span>
+        </li>
+    </ul>
+    <section class="tk_compCont">
+        <div class="RTopCTxaWrapper">
+            <span class="tk_compDCTitle">投诉内容：</span>
+            <p class="tk_compDCPara">我的套餐快到期了，因为在外地也不打算用了，所以
+                不续费准备等他自动取消。今天却发个短信告诉我手
+                机号码办理套餐不能自动取消，不取消就继续按月扣
+                费。我很无语！</p>
+        </div>
+    </section>
+    <section class="tk_RTopPicWrapper">
+        <div class="tk_RTopPicTitle">附加照片：</div>
+        <ul class="tk_RTopPicMenu clear">
+            <li class="tk_RTopPicItem"></li>
+            <li class="tk_RTopPicItem"></li>
+            <li class="tk_RTopPicItem"></li>
+            <li class="tk_RTopPicItem"></li>
+            <li class="tk_RTopPicItem"></li>
+        </ul>
+    </section>
+    <section class="tk_RTopPicWrapper">
+        <div class="tk_RTopPicTitle">附加音频：</div>
+        <ul class="tk_RTopPicMenu clear">
+            <li class="tk_RTopPicItemA">
+                <audio class="tk_compPicItAudio" controls>
+                    <source src="horse.mp3">
+                </audio>
+            </li>
+        </ul>
+    </section>
+    <section class="tk_RTopPicWrapper">
+        <div class="tk_RTopPicTitle">附加视频：</div>
+        <ul class="tk_RTopPicMenu clear">
+            <li class="tk_RTopPicItemV">
+                <canvas class="tk_RTopPicItemVCanvas none"></canvas>
+                <video class="tk_compPicItVideo" controls preload="auto" x5-video-player-type="h5"
+                       x5-video-player-fullscreen="true">
+                    <source src="mov_bbb.mp4">
+                </video>
+            </li>
+        </ul>
+    </section>
+    <footer class="tk_cCFooterWrapper">
+        <div class="tk_cCFIptWrapper">
+            <input class="tk_cCFIpt" placeholder="请输入审核意见（非必填）">
+        </div>
+        <div class="tk_cCFBtnWrapper">
+            <div class="tk_cCFBtn">拒绝</div>
+            <div class="tk_cCFBtn">通过</div>
+        </div>
+    </footer>
+</div>
+<div class="tk_CDPopUpWrapper none">
+    <div class="tk_CDPopUp"></div>
+</div>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <!--<button class="pswp__button pswp__button&#45;&#45;share" title="Share"></button>
+
+                <button class="pswp__button pswp__button&#45;&#45;fs" title="Toggle fullscreen"></button>-->
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption none">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script>
+    var openPhotoSwipe = function () {
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+
+        // build items array
+        var items = [
+            {
+                src: 'images/birthday-pop-up.png',
+                w: 600,
+                h: 600,
+
+                /*msrc: 'images/question-section-position-image.png', // small image placeholder,
+                 // main (large) image loads on top of it,
+                 // if you skip this parameter - grey rectangle will be displayed,
+                 // try to define this property only when small image was loaded before
+
+
+
+                 title: 'Image Caption'  // used by Default PhotoSwipe UI
+                 // if you skip it, there won't be any caption
+
+
+                 // You may add more properties here and use them.
+                 // For example, demo gallery uses "author" property, which is used in the caption.
+                 // author: 'John Doe'*/
+            },
+            {
+                src: 'images/preview-img.png',
+                w: 1200,
+                h: 900
+            },
+            {
+                src: 'images/wt-VIP-invitation-wrapper-bg.png',
+                w: 1200,
+                h: 8000
+            }
+        ];
+
+        // define options (if needed)
+        var options = {
+            // optionName: 'option value'
+            // for example:
+            index: 0 // start at first slide
+        };
+
+        // Initializes and opens PhotoSwipe
+        var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+        gallery.init();
+    };
+    /*openPhotoSwipe();*/
+    $(".tk_RTopPicItem").click(function () {
+        openPhotoSwipe();
+        $(".pswp").click(function (e) {
+            console.log("111");
+            var _con = $('.pswp__img');   // 设置目标区域
+
+            if (!_con.is(e.target) && _con.has(e.target).length === 0) { // Mark 1
+                console.log("222222");
+                $(".pswp").removeClass("pswp--open");
+
+            }
+        });
+    });
+</script>
+<script>
+    var tk_compPicItAudio = document.getElementsByClassName("tk_compPicItAudio")[0];
+    var tk_compPicItAudioP = tk_compPicItAudio.parentElement;
+    var tk_compPicItVideo = document.getElementsByClassName("tk_compPicItVideo")[0];
+    var tk_compPicItVideoP = tk_compPicItVideo.parentElement;
+    /*window.onresize = function(){
+     /!*tk_compPicItVideo.style.width = window.innerWidth + "px";
+     tk_compPicItVideo.style.height = window.innerHeight + "px";*!/
+     tk_compPicItVideo.style.width = 100 + "px";
+     tk_compPicItVideo.style.height = 100 + "px";
+     };*/
+    tk_compPicItVideo.addEventListener("x5videoenterfullscreen", function () {
+        tk_compPicItVideo.style.width = window.innerWidth + "px";
+        tk_compPicItVideo.style.height = window.innerHeight + "px";
+
+        tk_compPicItVideo.classList.add("fullscreen");
+    });
+    tk_compPicItVideo.addEventListener("x5videoexitfullscreen", function () {
+        tk_compPicItVideo.style.width = "";
+        tk_compPicItVideo.style.height = "";
+        tk_compPicItVideo.classList.remove("fullscreen");
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+        var v = document.getElementsByClassName('tk_compPicItVideo')[0];
+        var canvas = document.getElementsByClassName('tk_RTopPicItemVCanvas')[0];
+        var context = canvas.getContext('2d');
+
+        var cw = Math.floor(canvas.clientWidth);
+        var ch = Math.floor(canvas.clientHeight);
+        canvas.width = cw;
+        canvas.height = ch;
+
+        v.addEventListener('play', function () {
+            draw(this, context, cw, ch);
+        }, false);
+
+    }, false);
+
+    function draw(v, c, w, h) {
+        if (v.paused || v.ended) return false;
+        c.drawImage(v, 0, 0, w, h);
+        setTimeout(draw, 20, v, c, w, h);
+    }
+
+
+    var tk_compPicItAudio = document.getElementsByClassName("tk_compPicItAudio")[0];
+    var tk_compPicItAudioP = tk_compPicItAudio.parentElement;
+    var tk_compPicItVideo = document.getElementsByClassName("tk_compPicItVideo")[0];
+    var tk_compPicItVideoP = tk_compPicItVideo.parentElement;
+    /*tk_compPicItAudioP.style.backgroundImage="url('images/tk_compCDeo.png')";
+     tk_compPicItAudioP.style.backgroundSize="cover";
+     tk_compPicItAudioP.style.backgroundPosition="0px 0px";*/
+
+    /*tk_compPicItAudioP.onclick=function () {
+     tk_compPicItAudio.play();
+     };
+     tk_compPicItVideoP.onclick=function () {
+     tk_compPicItVideo.play();
+     };*/
+    /*$(".tk_RTopPicItem").click(function () {
+     $(".tk_CDPopUpWrapper").removeClass("none");
+     var img=$(this)[0];
+     var style = img.currentStyle || window.getComputedStyle(img, false);
+     var bi = style.backgroundImage.slice(4, -1);
+     $(".tk_CDPopUp")[0].style.backgroundImage="url("+ bi +")";
+     });*/
+
+    $(".tk_CDPopUpWrapper").mouseup(function (e) {
+        var _con = $('.tk_CDPopUp');
+        if (!_con.is(e.target) && _con.has(e.target).length === 0) {
+            $(this).addClass("none")
+        }
+    });
+
+</script>
+</body>
+</html>

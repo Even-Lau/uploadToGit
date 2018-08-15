@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>访客申请审批</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="style/layout.css">
+    <style>
+        html,body{
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="tk_pMN">
+    <ul class="tk_pMLMenu">
+        <li class="tk_pMLItem clear">
+            <span class="tk_compItemN">申请部门</span>
+            <span class="tk_compItemD">行政部</span>
+        </li>
+        <li class="tk_pMLItem clear">
+            <span class="tk_compItemN">申请人</span>
+            <span class="tk_compItemD">张三</span>
+        </li>
+
+        <li class="tk_pMLItem clear">
+            <span class="tk_compItemN">所在楼栋</span>
+            <span class="tk_compItemD">A2</span>
+        </li>
+        <li class="tk_pMLItem clear">
+            <span class="tk_compItemN">物品类型</span>
+            <span class="tk_compItemD">电脑</span>
+        </li>
+        <li class="tk_pMLItem clear">
+            <span class="tk_compItemN">规格型号</span>
+            <span class="tk_compItemD">台式机</span>
+        </li>
+        <li class="tk_pMLItem clear">
+            <span class="tk_compItemN">申请时间</span>
+            <span class="tk_compItemD">2017-09-18</span>
+        </li>
+        <li class="tk_pMLItem clear">
+            <span class="tk_compItemN">计划出门时间</span>
+            <span class="tk_compItemD">2017-09-20</span>
+        </li>
+        <li class="tk_pMLItem clear">
+            <span class="tk_compItemN">物品数量</span>
+            <span class="tk_compItemD">10</span>
+        </li>
+        <li class="tk_pMLItem clear">
+            <span class="tk_compItemN">物品单位</span>
+            <span class="tk_compItemD">台</span>
+        </li>
+        <li class="tk_pMLItem clear">
+            <span class="tk_compItemN">出门原因</span>
+            <span class="tk_compItemD">外勤</span>
+        </li>
+        <li class="tk_pMLItem clear">
+            <span class="tk_compItemN">备注说明</span>
+            <span class="tk_compItemD">外请使用</span>
+        </li>
+    </ul>
+    <section class="tk_RTopPicWrapper">
+        <div class="tk_RTopPicTitle">来访原因</div>
+        <p class="tk_vADPicPara">我的套餐快到期了，因为在外地也不打算用了，所以 不续费准备等他自动取消。今天却发个短信告诉我手 机号码办理套餐不能自动取消，不</p>
+    </section>
+    <footer class="tk_compBtnWrapper">
+        <div class="tk_compBtn">审批</div>
+    </footer>
+</div>
+<div class="tk_compPopUp2Wrapper none">
+    <div class="tk_compPopUp2">
+        <div class="tk_compPopUp2Title">审批</div>
+        <div class="tk_vAAPopUp2TxaWrapper">
+            <textarea class="tk_vAAPopUp2Txa" placeholder="请输入您的评论"></textarea>
+        </div>
+        <div class="tk_compPopUp2BtnWrapper">
+            <div class="tk_compPopUp2Btn fl">同意</div>
+            <div class="tk_compPopUp2Btn fr">拒绝</div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script>
+
+    /*弹窗*/
+    $(".tk_compBtn").click(function () {
+        $(".tk_compPopUp2Wrapper").removeClass("none")
+    });
+    $(".tk_compPopUp2Btn:nth-child(1)").click(function () {
+        var iptValue = $(this).parents(".tk_compPopUp2").find(".tk_compPopUp2ItIpt:checked").val();
+        $(this).parents(".tk_compItem").find(".tk_compItemCTxt").text(iptValue).addClass("on");
+        $(this).parents(".tk_compPopUp2Wrapper").addClass("none")
+    });
+    $(".tk_compPopUp2Btn:nth-child(2)").click(function () {
+        $(this).parents(".tk_compPopUp2Wrapper").addClass("none")
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>22物品出入管理-物业确认</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="style/layout.css">
+    <link rel="stylesheet" href="style/mobiscroll.css">
+    <style>
+        html,body{
+            height: 100%;
+        }
+        .dw-persp{
+            position: fixed;
+            height: 100% !important;
+        }
+        .dw.dwbg{
+            position: absolute;
+            top: 50% !important;
+            transform: translate(0,-50%);
+        }
+
+        .android-ics .dwv {
+            color: #ff6405;
+            border-color: #ff6405;
+        }
+
+        .dwl {
+            color: #ff6405;
+        }
+
+        .android-ics .dw .dwwol {
+            border-color: #ff6405;
+        }
+    </style>
+</head>
+<body>
+<div class="tk_pML">
+    <!--<header class="tk_compHeader">
+        <div class="tk_compHBack"></div>
+        <h3 class="tk_compHTitle">物业确认</h3>
+        <div class="tk_compHMore"></div>
+    </header>-->
+    <ul class="tk_pMLMenu">
+        <li class="tk_pMLItem clear">
+            <span class="tk_compItemN">审核状态</span>
+            <div class="tk_compItemC">
+                <span class="tk_compItemCTxt">请选择</span>
+                <div class="tk_compItCIcon"></div>
+            </div>
+            <div class="tk_compPopUp2Wrapper none">
+                <div class="tk_compPopUp2">
+                    <div class="tk_compPopUp2Title">投诉类型选择</div>
+                    <ul class="tk_compPopUp2Menu">
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">类型一</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="type" value="类型一">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">类型二</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="type" value="类型二">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">类型三</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="type" value="类型三">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">类型四</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="type" value="类型四">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">类型五</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="type" value="类型五">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">类型六</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="type" value="类型六">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">类型七</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="type" value="类型七">
+                        </li>
+                    </ul>
+                    <div class="tk_compPopUp2BtnWrapper">
+                        <div class="tk_compPopUp2Btn fl">确定</div>
+                        <div class="tk_compPopUp2Btn fr">关闭</div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="tk_pMLItem clear">
+            <span class="tk_compItemN">申请时间</span>
+            <div class="tk_compItemC">
+                <input class="tk_compItemCTxtIpt" placeholder="请选择"/>
+                <div class="tk_compItCIcon"></div>
+            </div>
+            <!--<ul class="tk_compItCMenu none">
+                <li class="tk_compItCItem">A</li>
+                <li class="tk_compItCItem">B</li>
+                <li class="tk_compItCItem">C</li>
+            </ul>-->
+        </li>
+    </ul>
+    <section class="tk_pMLSBtnWrapper">
+        <button class="tk_pMLSBtn">查询</button>
+    </section>
+    <section class="tk_pMLTableWrapper">
+        <table class="tk_pMLTable">
+            <thead class="tk_pMLTaThead">
+            <tr class="tk_pMLTaTheTr">
+                <th class="tk_pMLTaTheTrTh">
+                    <input type="checkbox" class="tk_pMLTaTheTrThCheck">
+                </th>
+                <th class="tk_pMLTaTheTrTh">申请单号</th>
+                <th class="tk_pMLTaTheTrTh">申请人</th>
+                <th class="tk_pMLTaTheTrTh">操作</th>
+            </tr>
+            </thead>
+            <tbody class="tk_pMLTaTbody">
+            <tr class="tk_pMLTaTboTr">
+                <td class="tk_pMLTaTboTrTd">
+                    <input type="checkbox" class="tk_pMLTaTboTrTdCheck">
+                </td>
+                <td class="tk_pMLTaTboTrTd">申请单号</td>
+                <td class="tk_pMLTaTboTrTd">申请人</td>
+                <td class="tk_pMLTaTboTrTd">操作</td>
+            </tr>
+            <tr class="tk_pMLTaTboTr">
+                <td class="tk_pMLTaTboTrTd">
+                    <input type="checkbox" class="tk_pMLTaTboTrTdCheck">
+                </td>
+                <td class="tk_pMLTaTboTrTd">申请单号</td>
+                <td class="tk_pMLTaTboTrTd">申请人</td>
+                <td class="tk_pMLTaTboTrTd">操作</td>
+            </tr>
+            <tr class="tk_pMLTaTboTr">
+                <td class="tk_pMLTaTboTrTd">
+                    <input type="checkbox" class="tk_pMLTaTboTrTdCheck">
+                </td>
+                <td class="tk_pMLTaTboTrTd">申请单号</td>
+                <td class="tk_pMLTaTboTrTd">申请人</td>
+                <td class="tk_pMLTaTboTrTd">操作</td>
+            </tr>
+            <tr class="tk_pMLTaTboTr">
+                <td class="tk_pMLTaTboTrTd">
+                    <input type="checkbox" class="tk_pMLTaTboTrTdCheck">
+                </td>
+                <td class="tk_pMLTaTboTrTd">申请单号</td>
+                <td class="tk_pMLTaTboTrTd">申请人</td>
+                <td class="tk_pMLTaTboTrTd">操作</td>
+            </tr>
+            <tr class="tk_pMLTaTboTr">
+                <td class="tk_pMLTaTboTrTd">
+                    <input type="checkbox" class="tk_pMLTaTboTrTdCheck">
+                </td>
+                <td class="tk_pMLTaTboTrTd">申请单号</td>
+                <td class="tk_pMLTaTboTrTd">申请人</td>
+                <td class="tk_pMLTaTboTrTd">操作</td>
+            </tr>
+            <tr class="tk_pMLTaTboTr">
+                <td class="tk_pMLTaTboTrTd">
+                    <input type="checkbox" class="tk_pMLTaTboTrTdCheck">
+                </td>
+                <td class="tk_pMLTaTboTrTd">申请单号</td>
+                <td class="tk_pMLTaTboTrTd">申请人</td>
+                <td class="tk_pMLTaTboTrTd">操作</td>
+            </tr>
+            <tr class="tk_pMLTaTboTr">
+                <td class="tk_pMLTaTboTrTd">
+                    <input type="checkbox" class="tk_pMLTaTboTrTdCheck">
+                </td>
+                <td class="tk_pMLTaTboTrTd">申请单号</td>
+                <td class="tk_pMLTaTboTrTd">申请人</td>
+                <td class="tk_pMLTaTboTrTd">操作</td>
+            </tr>
+            <tr class="tk_pMLTaTboTr">
+                <td class="tk_pMLTaTboTrTd">
+                    <input type="checkbox" class="tk_pMLTaTboTrTdCheck">
+                </td>
+                <td class="tk_pMLTaTboTrTd">申请单号</td>
+                <td class="tk_pMLTaTboTrTd">申请人</td>
+                <td class="tk_pMLTaTboTrTd">操作</td>
+            </tr>
+            <tr class="tk_pMLTaTboTr">
+                <td class="tk_pMLTaTboTrTd">
+                    <input type="checkbox" class="tk_pMLTaTboTrTdCheck">
+                </td>
+                <td class="tk_pMLTaTboTrTd">申请单号</td>
+                <td class="tk_pMLTaTboTrTd">申请人</td>
+                <td class="tk_pMLTaTboTrTd">操作</td>
+            </tr>
+            <tr class="tk_pMLTaTboTr">
+                <td class="tk_pMLTaTboTrTd">
+                    <input type="checkbox" class="tk_pMLTaTboTrTdCheck">
+                </td>
+                <td class="tk_pMLTaTboTrTd">申请单号</td>
+                <td class="tk_pMLTaTboTrTd">申请人</td>
+                <td class="tk_pMLTaTboTrTd">操作</td>
+            </tr>
+            <tr class="tk_pMLTaTboTr">
+                <td class="tk_pMLTaTboTrTd">
+                    <input type="checkbox" class="tk_pMLTaTboTrTdCheck">
+                </td>
+                <td class="tk_pMLTaTboTrTd">申请单号</td>
+                <td class="tk_pMLTaTboTrTd">申请人</td>
+                <td class="tk_pMLTaTboTrTd">操作</td>
+            </tr>
+            <tr class="tk_pMLTaTboTr">
+                <td class="tk_pMLTaTboTrTd">
+                    <input type="checkbox" class="tk_pMLTaTboTrTdCheck">
+                </td>
+                <td class="tk_pMLTaTboTrTd">申请单号</td>
+                <td class="tk_pMLTaTboTrTd">申请人</td>
+                <td class="tk_pMLTaTboTrTd">操作</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="tk_pMLCBtnWrapper clear">
+        <button class="tk_pMLCBtn">确认放行</button>
+    </section>
+</div>
+
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/mobiscroll.js"></script>
+<script type="text/javascript">
+    /*时间日期选择器*/
+    $(function(){
+        var currYear = (new Date()).getFullYear();
+        var opt={};
+        opt.date = {preset : 'date'};
+        opt.datetime = {preset : 'datetime'};
+        opt.time = {preset : 'time'};
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式
+            mode: 'scroller', //日期选择模式
+            dateFormat: 'yyyy-mm-dd',
+            lang: 'zh',
+            showNow: true,
+            nowText: "今天",
+            startYear: currYear - 10, //开始年份
+            endYear: currYear + 80 //结束年份
+        };
+        $(".a").mobiscroll($.extend(opt['date'], opt['default']));//年月日型
+        var optDateTime = $.extend(opt['datetime'], opt['default']);
+        var optTime = $.extend(opt['time'], opt['default']);
+
+        $(".tk_compItemCTxtIpt").mobiscroll(optDateTime).datetime(optDateTime);//年月日时分型
+        $("#EndTime").mobiscroll(optTime).time(optTime);//时分型
+
+    });
+</script>
+<script>
+    $(".tk_compItemC").click(function () {
+        $(this).siblings(".tk_compPopUp2Wrapper").removeClass("none")
+    });
+    $(".tk_compPopUp2Btn:nth-child(1)").click(function () {
+        var iptValue=$(this).parents(".tk_compPopUp2").find(".tk_compPopUp2ItIpt:checked").val();
+        $(this).parents(".tk_pMLItem").find(".tk_compItemCTxt").text(iptValue).addClass("on");
+        $(this).parents(".tk_compPopUp2Wrapper").addClass("none")
+    });
+    $(".tk_compPopUp2Btn:nth-child(2)").click(function () {
+        $(this).parents(".tk_compPopUp2Wrapper").addClass("none")
+    });
+    $(".tk_compItCItem").click(function () {
+        $(this).parents(".tk_compItCMenu").slideUp();
+        $(this).parents(".tk_compItCMenu").siblings(".tk_compItemC").children(".tk_compItemCTxt").text($(this).text()).addClass("on");
+    });
+    $(".tk_compCTxa").focus(function () {
+        $(".tk_compCTxa").siblings(".tk_compCNum").addClass("none")
+    });
+
+    var countChecked = function() {
+        var n = $( ".tk_pMLTaTboTrTdCheck:checked" ).length;
+        var total=$( ".tk_pMLTaTboTrTdCheck" ).length;
+        console.log(n);
+        console.log(total);
+        if (n==total){
+            $(".tk_pMLTaTheTrThCheck")[0].checked=true;
+        }else{
+            $(".tk_pMLTaTheTrThCheck")[0].checked=false;
+        }
+    };
+    countChecked();
+
+    $(".tk_pMLTableWrapper").on("click",".tk_pMLTaTboTrTdCheck",countChecked);
+    $(".tk_pMLTableWrapper").on("click",".tk_pMLTaTheTrThCheck",function () {
+        for(var i=0,len=$(".tk_pMLTaTboTrTdCheck").length;i<len;i++){
+            $(".tk_pMLTaTboTrTdCheck")[i].checked=true;
+        }
+    });
+</script>
+</body>
+</html>

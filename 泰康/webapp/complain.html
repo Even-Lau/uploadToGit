@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01投诉表扬-投诉</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="style/layout.css">
+    <style>
+        html,body{
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="tk_complain">
+    <!--<header class="tk_compHeader">
+        <div class="tk_compHBack"></div>
+        <h3 class="tk_compHTitle">投诉</h3>
+        <div class="tk_compHMore"></div>
+    </header>-->
+    <ul class="tk_compMenu">
+        <li class="tk_compItem clear">
+            <span class="tk_compItemN">投诉人</span>
+            <span class="tk_compItemD">小明同学</span>
+        </li>
+        <li class="tk_compItem clear">
+            <span class="tk_compItemN">联系电话</span>
+            <span class="tk_compItemD">13800138000</span>
+        </li>
+        <li class="tk_compItem clear">
+            <span class="tk_compItemN">投诉类型</span>
+            <div class="tk_compItemC">
+                <span class="tk_compItemCTxt">请选择</span>
+                <div class="tk_compItCIcon"></div>
+            </div>
+            <!--<ul class="tk_compItCMenu none">
+                <li class="tk_compItCItem">A</li>
+                <li class="tk_compItCItem">B</li>
+                <li class="tk_compItCItem">C</li>
+            </ul>-->
+            <div class="tk_compPopUp2Wrapper none">
+                <div class="tk_compPopUp2">
+                    <div class="tk_compPopUp2Title">投诉类型选择</div>
+                    <ul class="tk_compPopUp2Menu">
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">类型一</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="type" value="类型一">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">类型二</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="type" value="类型二">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">类型三</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="type" value="类型三">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">类型四</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="type" value="类型四">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">类型五</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="type" value="类型五">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">类型六</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="type" value="类型六">
+                        </li>
+                        <li class="tk_compPopUp2Item">
+                            <label class="tk_compPopUp2ItName">类型七</label>
+                            <input class="tk_compPopUp2ItIpt" type="radio" name="type" value="类型七">
+                        </li>
+                    </ul>
+                    <div class="tk_compPopUp2BtnWrapper">
+                        <div class="tk_compPopUp2Btn fl">确定</div>
+                        <div class="tk_compPopUp2Btn fr">关闭</div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <section class="tk_compCont">
+            <div class="tk_compCTxaWrapper">
+                <textarea class="tk_compCTxa" placeholder="请输入投诉内容"></textarea>
+                <span class="tk_compCNum">0/200</span>
+            </div>
+            <div class="tk_compCDeo clear">
+
+                    <div class="tk_compCDAudio">
+                        <input type="file" accept="audio/*" multiple name="audioAttach" capture="microphone">
+                    </div>
+                    <div class="tk_compCDVideo">
+                        <input type="file" accept="video/*" multiple name="videoAttach" capture="camcorder">
+                    </div>
+                    <div class="tk_compCDCamera">
+                        <input type="file" accept="image/*" multiple name="imageAttach" capture="camera">
+                    </div>
+
+            </div>
+        </section>
+        <section class="tk_compPicWrapper">
+            <div class="tk_compPicItMsg">未选择任何文件</div>
+            <ul class="tk_compPic clear preview none">
+                <!--<li class="tk_compPicItem"></li>-->
+            </ul>
+        </section>
+
+        <footer class="tk_compBtnWrapper">
+            <button class="tk_compBtn" type="button">提交</button>
+        </footer>
+    </form>
+</div>
+<div class="tk_compPopUpWrapper none">
+    <div class="tk_compPopUp">
+        <div class="tk_compPopUpMsg">照片数量不能超过8张！</div>
+        <div class="tk_compPopUpBtnWrapper">
+            <div class="tk_compPopUpBtn">确定</div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script>
+    $(".tk_compItemC").click(function () {
+        $(this).siblings(".tk_compPopUp2Wrapper").removeClass("none")
+    });
+    $(".tk_compPopUp2Btn:nth-child(1)").click(function () {
+        var iptValue=$(this).parents(".tk_compPopUp2").find(".tk_compPopUp2ItIpt:checked").val();
+        $(this).parents(".tk_compItem").find(".tk_compItemCTxt").text(iptValue).addClass("on");
+        $(this).parents(".tk_compPopUp2Wrapper").addClass("none")
+    });
+    $(".tk_compPopUp2Btn:nth-child(2)").click(function () {
+        $(this).parents(".tk_compPopUp2Wrapper").addClass("none")
+    });
+    $(".tk_compItCItem").click(function () {
+        $(this).parents(".tk_compItCMenu").slideUp();
+        $(this).parents(".tk_compItCMenu").siblings(".tk_compItemC").children(".tk_compItemCTxt").text($(this).text()).addClass("on");
+    });
+    $(".tk_compCTxa").focus(function () {
+        $(".tk_compCTxa").siblings(".tk_compCNum").addClass("none")
+    });
+
+    /*点击camera按钮*/
+    var inputWrapper = document.querySelector('.tk_compCDCamera');
+    var input = inputWrapper.firstElementChild;
+    var inputWrapperV = document.querySelector('.tk_compCDVideo');
+    var inputV = inputWrapperV.firstElementChild;
+    var inputWrapperA = document.querySelector('.tk_compCDAudio');
+    var inputA = inputWrapperA.firstElementChild;
+
+    var preview = document.querySelector('.preview');
+    var msg = document.querySelector('.tk_compPicItMsg');
+    var picArr=[];
+
+    var targetAudio = [];
+    var targetVideo = [];
+    var targetImage = [];
+    function updateImageDisplay() {
+
+        /*var caIpt = document.createElement('input');
+        caIpt.type = "file";
+        caIpt.accept = "image/!*;capture=camera";
+        caIpt.multiple = "multiple";
+        inputWrapper.insertBefore(caIpt, input);*/
+
+        msg.classList.add("none");
+        preview.classList.remove("none");
+        var curFiles = this.files;
+        if(this==inputA){
+            for(var a = 0; a<curFiles.length;a++){
+                targetAudio.push(this.files[a])
+            }
+        }
+        else if(this==inputV){
+            for(var v = 0; v<curFiles.length;v++){
+                targetVideo.push(this.files[v])
+            }
+        }
+        else if(this==input){
+            for(var t = 0; t<curFiles.length;t++){
+                targetImage.push(this.files[t])
+            }
+        }
+        var self=this;
+        console.log(this.name);
+        console.log(curFiles.length);
+        if (curFiles.length === 0) {
+
+            if ($(".tk_compPicItem").length == 0) {
+                msg.classList.remove("none");
+                preview.classList.add("none");
+            }
+
+        } else if (curFiles.length > 8) {
+            /*判断数量*/
+            $(".tk_compPopUpWrapper").removeClass("none").find(".tk_compPopUpMsg").text("多媒体数量不能超过8张！");
+            $(".tk_compPicItMsg").removeClass("none");
+            preview.classList.add("none");
+        } else {
+            /*判断数量*/
+            if ($(".tk_compPicItem").length + curFiles.length > 8) {
+                $(".tk_compPopUpWrapper").removeClass("none").find(".tk_compPopUpMsg").text("多媒体数量不能超过8张！");
+                return;
+            } else {
+                function readAndPreview(file) {
+
+                    // Make sure `file.type` matches our extensions criteria
+                    if ( validFileType(file) ) {
+
+                        var reader = new FileReader();
+
+                        reader.addEventListener("load", function () {
+
+                            var listItemDelete = document.createElement('div');
+                            listItemDelete.classList.add("tk_RTopPicItDelete");
+                            var listItem = document.createElement('li');
+                            listItem.classList.add("tk_compPicItem");
+
+                            /*判断文件类型*/
+                            switch(self.name){
+                                case "imageAttach":
+                                    if(/image\/(jpe?g|png|gif)$/i.test(file.type)){
+                                        listItem.style.backgroundImage = "url(" + this.result + ")";
+
+                                        picArr.push(this.result);
+                                        listItem.appendChild(listItemDelete);
+                                        listItem.classList.add("tk_compPicItImg_bg");
+                                        preview.appendChild(listItem);
+                                        /*doUpload();*/
+                                    }else{
+                                        $(".tk_compPopUpWrapper").removeClass("none").find(".tk_compPopUpMsg").text("只能上传图片！");
+                                    };
+                                    break;
+                                case "videoAttach":
+                                    if(/video\/(mp4|webm|ogg)$/i.test(file.type)){
+                                        var video = document.createElement('video');
+                                        video.classList.add("tk_compPicItVideo");
+                                        var source = document.createElement('source');
+
+                                        source.setAttribute('src', this.result);
+
+                                        video.appendChild(source);
+                                        listItem.appendChild(video);
+                                        listItem.classList.add("tk_compPicItVideo_bg");
+
+                                        picArr.push(this.result);
+                                        listItem.appendChild(listItemDelete);
+                                        preview.appendChild(listItem);
+                                        /*doUpload();*/
+                                    }else{
+                                        $(".tk_compPopUpWrapper").removeClass("none").find(".tk_compPopUpMsg").text("只能上传视频！");
+                                    };
+                                    break;
+                                case "audioAttach":
+                                    if(/audio\/(mpeg|ogg|wav|mp3)$/i.test(file.type)){
+                                        var audio = document.createElement('audio');
+                                        audio.classList.add("tk_compPicItAudio");
+                                        var sourceA = document.createElement('source');
+
+                                        sourceA.setAttribute('src', this.result);
+
+                                        audio.appendChild(sourceA);
+                                        listItem.style.backgroundImage = "url('images/tk_compCDeo.png')";
+                                        listItem.classList.add("tk_compPicItAudio_bg");
+                                        listItem.style.backgroundPosition = "0 0";
+                                        listItem.appendChild(audio);
+
+                                        picArr.push(this.result);
+                                        listItem.appendChild(listItemDelete);
+                                        preview.appendChild(listItem);
+                                        /*doUpload();*/
+                                    }else{
+                                        $(".tk_compPopUpWrapper").removeClass("none").find(".tk_compPopUpMsg").text("只能上传音频！");
+                                    };
+                                    break;
+                            };
+
+
+                        }, false);
+
+                        reader.readAsDataURL(file);
+                    }
+
+                };
+
+                if (curFiles) {
+                    [].forEach.call(curFiles, readAndPreview);
+                };
+                console.log(picArr);
+            }
+
+        };
+        /*input.addEventListener('change', updateImageDisplay);*/
+    };
+
+    input.addEventListener('change', updateImageDisplay);
+    inputV.addEventListener('change', updateImageDisplay);
+    inputA.addEventListener('change', updateImageDisplay);
+
+    var fileTypes = [
+        'image/jpeg',
+        'image/pjpeg',
+        'image/png',
+        "video/mp4",
+        "video/webm",
+        "video/ogg",
+        "audio/mpeg",
+        "audio/ogg",
+        "audio/mp3",
+        "audio/wav"
+    ];
+
+    function validFileType(file) {
+        for (var i = 0; i < fileTypes.length; i++) {
+            if (file.type === fileTypes[i]) {
+                return true;
+            }
+        }
+        return false;
+    };
+    /*点击提交按钮*/
+    var submitBtn = document.getElementsByClassName("tk_compBtn")[0];
+    submitBtn.addEventListener("click", doUpload);
+    function doUpload() {
+        /*// 实例化一个AJAX对象
+        var xhr = new XMLHttpRequest();
+
+        xhr.open("POST", "http://gdcyberway.com:8300/crm/weixin/uploadAttachment?fileCategory=imageAttachment", true);
+
+        // 发送表单数据
+        xhr.send(picArr);*/
+        var formData = new FormData($("#uploadForm")[0]);
+        formData.append('audioAttachment',targetAudio);
+        formData.append('videoAttachment',targetVideo);
+        formData.append('imageAttachment',targetImage);
+        $.ajax({
+            url : "http://gdcyberway.com:8300/crm/weixin/uploadAttachment?fileCategory=imageAttachment&callback=callback",
+            type: 'POST',
+            dataType:"JSONP",
+            data: formData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success : function(data) {
+                alert("成功了！");
+            },
+            error : function(data) {
+                alert("失败了！");
+            }
+        });
+    };
+    /*删除图片*/
+    $(".tk_compPic").on("click", ".tk_RTopPicItDelete", function () {
+        var index;
+        if($(this).parents(".tk_compPicItem").is('.tk_compPicItImg_bg')){
+            index=$(this).parents(".tk_compPicItem").index(".tk_compPicItImg_bg");
+            console.log(index);
+            targetImage.splice(index,1);
+        }
+        if($(this).parents(".tk_compPicItem").is('.tk_compPicItVideo_bg')){
+            index=$(this).parents(".tk_compPicItem").index(".tk_compPicItVideo_bg");
+            console.log(index);
+            targetVideo.splice(index,1);
+        }
+        if($(this).parents(".tk_compPicItem").is('.tk_compPicItAudio')){
+            index=$(this).parents(".tk_compPicItem").index(".tk_compPicItAudio");
+            console.log(index);
+            targetAudio.splice(index,1);
+        }
+
+        picArr.splice(index,1);
+        console.log(picArr);
+        var menu = $(this).parents(".tk_compPicItem").parents(".tk_compPic");
+        $(this).parents(".tk_compPicItem").remove();
+        if ($(".tk_compPicItem").length == 0) {
+            menu.siblings(".tk_compPicItMsg").removeClass("none");
+            menu.addClass("none")
+        }
+    });
+    /*关闭弹窗*/
+    $(".tk_compPopUpBtn").click(function () {
+        $(this).parents(".tk_compPopUpWrapper").addClass("none")
+    });
+    //判断设备类型，动态添加capture属性(我使用Zepto判断)：
+    function getMobileOperatingSystem() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        // Windows Phone must come first because its UA also contains "Android"
+        /*if (/windows phone/i.test(userAgent)) {
+         return "Windows Phone";
+         }*/
+        alert(userAgent)
+
+        if (/android/i.test(userAgent)) {
+            console.log("android");
+            $(".tk_compCDCamera").children("input[type='file']").attr("capture","camera");
+            $(".tk_compCDVideo").children("input[type='file']").attr("capture","camcorder");
+            $(".tk_compCDAudio").children("input[type='file']").attr("capture","microphone");
+        }
+
+        // iOS detection from: http://stackoverflow.com/a/9039885/177710
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            console.log("iOS");
+            $(".tk_compCDCamera").children("input[type='file']").removeAttr("capture");
+            $(".tk_compCDVideo").children("input[type='file']").removeAttr("capture");
+            $(".tk_compCDAudio").children("input[type='file']").removeAttr("capture");
+        }
+
+        return "unknown";
+    };
+    getMobileOperatingSystem();
+</script>
+</body>
+</html>

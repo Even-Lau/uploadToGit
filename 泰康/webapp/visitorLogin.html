@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20物品出入管理-列表-详请</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="style/layout.css">
+    <style>
+        html,body{
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="tk_vL">
+    <section class="tk_vLBanner"></section>
+    <form>
+        <ul class="tk_vLMenu">
+            <li class="tk_vLItem">
+                <input class="tk_vLItNum" type="text" placeholder="请输入手机号码">
+            </li>
+            <li class="tk_vLItem clear">
+                <input class="tk_vLItCode" type="text" placeholder="请输入验证码">
+                <div class="tk_vLItBtnWrapper">
+                    <div class="tk_vLItBtn">短信验证</div>
+                    <div class="tk_vLItVeil none"></div>
+                </div>
+            </li>
+        </ul>
+        <button class="tk_vLBtn">登录</button>
+    </form>
+
+</div>
+
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script>
+    $(".tk_vLItBtn").click(function () {
+        var tk_vLItBtn = document.getElementsByClassName("tk_vLItBtn")[0];
+        var tk_vLItVeil = document.getElementsByClassName("tk_vLItVeil")[0];
+        tk_vLItVeil.classList.remove("none");
+        // Find the distance between now an the count down date
+        var distance = 60;
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            distance--;
+
+            // Display the result in the element with id="demo"
+            tk_vLItBtn.innerHTML = distance + "s ";
+
+            // If the count down is finished, write some text
+            if (distance <= 0) {
+                tk_vLItBtn.innerHTML = "短信验证";
+                tk_vLItVeil.classList.add("none");
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    });
+
+</script>
+</body>
+</html>

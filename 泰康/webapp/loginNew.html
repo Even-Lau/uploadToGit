@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录新版</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="style/layout.css">
+    <style>
+        html,body{
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="tk_loginN">
+    <!--<header class="tk_compHeader">
+        <div class="tk_compHBack"></div>
+        <h3 class="tk_compHTitle">用户登录</h3>
+        <div class="tk_compHMore"></div>
+    </header>-->
+    <section class="tk_logNLogoWrapper">
+        <a class="tk_logNLogoHref" href="javascript:;">
+            <img class="tk_logNLogo" src="images/tk_logNLogo.png">
+        </a>
+    </section>
+    <section class="tk_loginNMain">
+        <section class="tk_logFormWrapper">
+            <p class="tk_loginNTitle">行政物管综合服务平台(MCIS)</p>
+            <ul class="tk_logMenuN">
+                <li class="tk_logItemN clear">
+                    <input class="tk_logIptN" name="username" placeholder="请输入工号/手机号码"/>
+                </li>
+                <li class="tk_logItemN clear">
+
+                    <input class="tk_logIptN" name="password" placeholder="请输入密码"/>
+                </li>
+                <li class="tk_logItemN clear last">
+                    <input class="tk_logIptNV" name="verification" placeholder="请输入验证码"/>
+                    <div class="tk_logItNNameVCode"></div>
+                </li>
+            </ul>
+        </section>
+        <section class="tk_logNPassWrapper clear">
+            <div class="tk_logPassL clear">
+                <input type="checkbox" class="tk_logPaCheck" checked>
+                <span class="tk_logPassTxt">记住密码</span>
+            </div>
+            <a href="javascript:;" class="tk_logPassHref">忘记密码？</a>
+        </section>
+        <section class="tk_logNBtnWrapper">
+            <button class="tk_logNBtn">立即登录</button>
+        </section>
+    </section>
+
+</div>
+<div class="tk_compPopUpWrapper none">
+    <div class="tk_compPopUp">
+        <div class="tk_compPopUpMsg">验证码错误</div>
+        <div class="tk_compPopUpBtnWrapper">
+            <div class="tk_compPopUpBtn">确定</div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script>
+    var code;
+
+    var tk_logItNameVCode=document.getElementsByClassName("tk_logItNNameVCode")[0];
+    changeImg();
+    tk_logItNameVCode.addEventListener('click',changeImg);
+    function changeImg() {
+        var arrays=new Array(
+            '1','2','3','4','5','6','7','8','9','0',
+            'a','b','c','d','e','f','g','h','i','j',
+            'k','l','m','n','o','p','q','r','s','t',
+            'u','v','w','x','y','z',
+            'A','B','C','D','E','F','G','H','I','J',
+            'K','L','M','N','O','P','Q','R','S','T',
+            'U','V','W','X','Y','Z'
+        );
+        code='';
+        for(var i=0;i<4;i++){
+            //随机获取一个数组的下标
+            var r=parseInt(Math.random()*arrays.length);
+            code+=arrays[r];
+        }
+        tk_logItNameVCode.innerHTML=code;
+    };
+    $(".tk_logIptNV").blur(function () {
+        var val = $(this).val().toLowerCase();
+        console.log(val)
+        if (val != code.toLowerCase()) {
+            $(".tk_compPopUpWrapper").removeClass("none")
+        };
+        $(this).val("")
+    });
+    $(".tk_compPopUpBtn").click(function () {
+        $(".tk_compPopUpWrapper").addClass("none")
+    })
+
+</script>
+</body>
+</html>

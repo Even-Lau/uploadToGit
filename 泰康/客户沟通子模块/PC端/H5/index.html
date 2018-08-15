@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="stylesheet" href="style/layout.css">
+</head>
+<body>
+<div class="fm_carnival">
+    <div class="fm_carnivalAR"></div>
+    <div class="fm_carTitleWrapper">
+        <div class="fm_carTitle">距离<span class="fm_carTitleB">10</span>月<span class="fm_carTitleB">20</span>日预售仅剩</div>
+    </div>
+    <div class="fm_carTimeWrapper">
+        <div class="fm_carDays"></div>
+        <div class="fm_carHours"></div>
+        <div class="fm_carMinutes"></div>
+        <div class="fm_carSeconds"></div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Oct 20, 2017 00:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+        // Get todays date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now an the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        /*document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";*/
+        document.getElementsByClassName("fm_carDays")[0].innerHTML=days;
+        document.getElementsByClassName("fm_carHours")[0].innerHTML=hours;
+        document.getElementsByClassName("fm_carMinutes")[0].innerHTML=minutes;
+        document.getElementsByClassName("fm_carSeconds")[0].innerHTML=seconds;
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+</script>
+</body>
+</html>

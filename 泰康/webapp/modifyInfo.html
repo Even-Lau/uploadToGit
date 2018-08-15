@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的信息修改</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="style/layout.css">
+    <!-- Core CSS file -->
+    <link rel="stylesheet" href="style/photoswipe.css">
+
+    <!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+         In the folder of skin CSS file there are also:
+         - .png and .svg icons sprite,
+         - preloader.gif (for browsers that do not support CSS animations) -->
+    <link rel="stylesheet" href="style/default-skin/default-skin.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="tk_modifyInfo">
+    <section class="tk_mITop clear">
+        <div class="tk_mITLeft">用户头像</div>
+        <div class="tk_mITAvatar"></div>
+    </section>
+    <ul class="tk_mIMenu">
+        <li class="tk_mIItem">
+            <div class="tk_mIItLeft">用户姓名</div>
+            <input class="tk_mIItRightIpt" type="text" placeholder="请输入用户姓名" value="张三">
+        </li>
+        <li class="tk_mIItem">
+            <div class="tk_mIItLeft">所属部门</div>
+            <input class="tk_mIItRightIpt" type="text" placeholder="请输入所属部门" value="开发部">
+        </li>
+        <li class="tk_mIItem">
+            <div class="tk_mIItLeft">手机号码</div>
+            <input class="tk_mIItRightIpt" type="text" placeholder="请输入手机号码" value="18888888888">
+        </li>
+    </ul>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <section class="tk_RTopPicWrapper">
+            <div class="tk_RTopPicTitle">上传照片</div>
+            <ul class="tk_vADPicMenu clear">
+                <li class="tk_vADPicItem tk_compPicItImg_bg" style="background-image: url('images/tk_mITAvatar.png')">
+                    <div class="tk_RTopPicItDelete"></div>
+                </li>
+                <li class="tk_vADPicItem uploadIDCard none">
+                    <i class="tk_vADPicItIcon"></i>
+                    <span class="tk_vADPicItTxt">上传照片</span>
+                    <input class="tk_vADPicItIpt" type="file" accept="image/*" name="imageAttach"
+                    >
+                </li>
+                <li class="tk_vADPicItem another"></li>
+            </ul>
+        </section>
+        <section class="tk_vCMsgWrapper clear">
+            <i class="tk_vCMsgIcon"></i>
+            <span class="tk_vCMsg">请按范例上传图片</span>
+        </section>
+    </form>
+    <section class="tk_mIBtnWrapper">
+        <button class="tk_mIBtn">上传自拍照</button>
+    </section>
+    <section class="tk_mIBtnWrapper">
+        <button class="tk_mIBtn" style="color: rgb(255, 100, 5);background-color: #fff;">解除绑定</button>
+    </section>
+</div>
+<div class="tk_compPopUpWrapper none">
+    <div class="tk_compPopUp">
+        <div class="tk_compPopUpMsg">照片数量不能超过1张！</div>
+        <div class="tk_compPopUpBtnWrapper">
+            <div class="tk_compPopUpBtn">确定</div>
+        </div>
+    </div>
+</div>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <!--<button class="pswp__button pswp__button&#45;&#45;share" title="Share"></button>
+
+                <button class="pswp__button pswp__button&#45;&#45;fs" title="Toggle fullscreen"></button>-->
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption none">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<!-- Core JS file -->
+<script src="js/photoswipe.min.js"></script>
+<!-- UI JS file -->
+<script src="js/photoswipe-ui-default.min.js"></script>
+<script>
+    var openPhotoSwipe = function () {
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+
+        // build items array
+        var items = [
+            {
+                src: 'images/tk_mITAvatar.png',
+                w: 600,
+                h: 600,
+
+                /*msrc: 'images/question-section-position-image.png', // small image placeholder,
+                 // main (large) image loads on top of it,
+                 // if you skip this parameter - grey rectangle will be displayed,
+                 // try to define this property only when small image was loaded before
+
+
+
+                 title: 'Image Caption'  // used by Default PhotoSwipe UI
+                 // if you skip it, there won't be any caption
+
+
+                 // You may add more properties here and use them.
+                 // For example, demo gallery uses "author" property, which is used in the caption.
+                 // author: 'John Doe'*/
+            }
+        ];
+
+        // define options (if needed)
+        var options = {
+            // optionName: 'option value'
+            // for example:
+            index: 0, // start at first slide
+            tapToClose: true,
+            showHideOpacity: false,
+            showAnimationDuration: 0
+        };
+
+        // Initializes and opens PhotoSwipe
+        var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+        gallery.init();
+    };
+    /*openPhotoSwipe();*/
+    $(".tk_vADPicMenu").on("click", ".tk_compPicItImg_bg", function () {
+        openPhotoSwipe();
+
+    });
+</script>
+<script>
+    $(".tk_compItemC").click(function () {
+        $(this).siblings(".tk_compPopUp2Wrapper").removeClass("none")
+    });
+    $(".tk_compPopUp2Btn:nth-child(1)").click(function () {
+        var iptValue = $(this).parents(".tk_compPopUp2").find(".tk_compPopUp2ItIpt:checked").val();
+        $(this).parents(".tk_pMLItem").find(".tk_compItemCTxt").text(iptValue).addClass("on");
+        $(this).parents(".tk_compPopUp2Wrapper").addClass("none")
+    });
+    $(".tk_compPopUp2Btn:nth-child(2)").click(function () {
+        $(this).parents(".tk_compPopUp2Wrapper").addClass("none")
+    });
+    /*关闭弹窗*/
+    $(".tk_compPopUpBtn").click(function () {
+        $(this).parents(".tk_compPopUpWrapper").addClass("none")
+    });
+    /*点击camera按钮*/
+
+    var input = document.getElementsByClassName('tk_vADPicItIpt');
+
+
+    var picArr = [];
+
+
+    var targetImage = [];
+
+    function updateImageDisplay() {
+        var iptParent = this.parentElement;
+        var preview = iptParent.parentElement;
+        var iptlen = preview.children.length;
+        /*var caIpt = document.createElement('input');
+         caIpt.type = "file";
+         caIpt.accept = "image/!*;capture=camera";
+         caIpt.multiple = "multiple";
+         inputWrapper.insertBefore(caIpt, input);*/
+
+
+        var curFiles = this.files;
+        if (this == input) {
+            for (var t = 0; t < curFiles.length; t++) {
+                targetImage.push(this.files[t])
+            }
+        }
+        ;
+        var self = this;
+        console.log(this.name);
+        console.log(curFiles.length);
+        if (curFiles.length === 0) {
+
+            if ($(".tk_vADPicItem").length == 0) {
+
+            }
+
+        } else if (curFiles.length > 1) {
+            /*判断数量*/
+            $(".tk_compPopUpWrapper").removeClass("none").find(".tk_compPopUpMsg").text("多媒体数量不能超过1张！");
+
+
+        } else {
+            /*判断数量*/
+            if (iptlen + curFiles.length > 3) {
+                $(".tk_compPopUpWrapper").removeClass("none").find(".tk_compPopUpMsg").text("多媒体数量不能超过1张！");
+                return;
+            } else {
+                function readAndPreview(file) {
+
+                    // Make sure `file.type` matches our extensions criteria
+                    if (validFileType(file)) {
+
+                        var reader = new FileReader();
+
+                        reader.addEventListener("load", function () {
+
+                            var listItemDelete = document.createElement('div');
+                            listItemDelete.classList.add("tk_RTopPicItDelete");
+                            var listItem = document.createElement('li');
+                            listItem.classList.add("tk_vADPicItem");
+
+                            /*判断文件类型*/
+                            switch (self.name) {
+                                case "imageAttach":
+                                    if (/image\/(jpe?g|png|gif)$/i.test(file.type)) {
+                                        listItem.style.backgroundImage = "url(" + this.result + ")";
+
+                                        picArr.push(this.result);
+                                        listItem.appendChild(listItemDelete);
+                                        listItem.classList.add("tk_compPicItImg_bg");
+                                        //preview.appendChild(listItem);
+                                        preview.insertBefore(listItem, iptParent);
+
+                                        self.parentElement.classList.add("none");
+                                        /*doUpload();*/
+                                    } else {
+                                        $(".tk_compPopUpWrapper").removeClass("none").find(".tk_compPopUpMsg").text("只能上传图片！");
+                                    }
+                                    ;
+                                    break;
+                            }
+                            ;
+
+
+                        }, false);
+
+                        reader.readAsDataURL(file);
+                    }
+
+                };
+
+                if (curFiles) {
+                    [].forEach.call(curFiles, readAndPreview);
+                }
+                ;
+                console.log(picArr);
+            }
+
+        }
+        ;
+        /*input.addEventListener('change', updateImageDisplay);*/
+    };
+
+    for (let i = 0, len = input.length; i < len; i++) {
+        input[i].addEventListener('change', updateImageDisplay);
+    }
+
+
+    var fileTypes = [
+        'image/jpeg',
+        'image/pjpeg',
+        'image/png',
+    ];
+
+    function validFileType(file) {
+        for (var i = 0; i < fileTypes.length; i++) {
+            if (file.type === fileTypes[i]) {
+                return true;
+            }
+        }
+        return false;
+    };
+    /*点击提交按钮*/
+    /*var submitBtn = document.getElementsByClassName("tk_compBtn")[0];
+    submitBtn.addEventListener("click", doUpload);
+    function doUpload() {
+        /!*!// 实例化一个AJAX对象
+         var xhr = new XMLHttpRequest();
+
+         xhr.open("POST", "http://gdcyberway.com:8300/crm/weixin/uploadAttachment?fileCategory=imageAttachment", true);
+
+         // 发送表单数据
+         xhr.send(picArr);*!/
+        var formData = new FormData($("#uploadForm")[0]);
+        formData.append('audioAttachment', targetAudio);
+        formData.append('videoAttachment', targetVideo);
+        formData.append('imageAttachment', targetImage);
+        $.ajax({
+            url: "http://gdcyberway.com:8300/crm/weixin/uploadAttachment?fileCategory=imageAttachment&callback=callback",
+            type: 'POST',
+            dataType: "JSONP",
+            data: formData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (data) {
+                alert("成功了！");
+            },
+            error: function (data) {
+                alert("失败了！");
+            }
+        });
+    };*/
+    /*删除图片*/
+    $(".tk_vADPicMenu").on("click", ".tk_RTopPicItDelete", function (event) {
+        event.stopPropagation();
+        var index = $(this).parents(".tk_vADPicItem").index(".tk_compPicItImg_bg");
+        console.log(index);
+        targetImage.splice(index, 1);
+
+
+        picArr.splice(index, 1);
+        console.log(picArr);
+        var menu = $(this).parents(".tk_vADPicItem").parents(".tk_compPic");
+
+        $(this).parents(".tk_vADPicItem").siblings(".uploadIDCard").removeClass("none");
+        $(this).parents(".tk_vADPicItem").siblings(".uploadIDCard").children(".tk_vADPicItIpt").val("");
+
+        $(this).parents(".tk_vADPicItem").remove();
+        if ($(".tk_vADPicItem").length == 0) {
+            menu.siblings(".tk_compPicItMsg").removeClass("none");
+            menu.addClass("none")
+        }
+        ;
+
+    });
+    /*关闭弹窗*/
+    $(".tk_compPopUpBtn").click(function () {
+        $(this).parents(".tk_compPopUpWrapper").addClass("none")
+    });
+    //判断设备类型，动态添加capture属性：
+    /*function getMobileOperatingSystem() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        // Windows Phone must come first because its UA also contains "Android"
+        /!*if (/windows phone/i.test(userAgent)) {
+         return "Windows Phone";
+         }*!/
+
+        if (/android/i.test(userAgent)) {
+            console.log("android");
+            $(".tk_vADPicItIpt[type='file']").attr("capture", "camera");
+            $(".tk_compCDVideo").children("input[type='file']").attr("capture", "camcorder");
+            $(".tk_compCDAudio").children("input[type='file']").attr("capture", "microphone");
+        }
+
+        // iOS detection from: http://stackoverflow.com/a/9039885/177710
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            console.log("iOS");
+            $(".tk_vADPicItIpt[type='file']").removeAttr("capture");
+            $(".tk_compCDVideo").children("input[type='file']").removeAttr("capture");
+            $(".tk_compCDAudio").children("input[type='file']").removeAttr("capture");
+        }
+
+        return "unknown";
+    };
+    getMobileOperatingSystem();*/
+</script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11我的表扬</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="style/layout.css">
+    <style>
+        html,body{
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="tk_myComplain">
+    <!--<header class="tk_compHeader">
+        <div class="tk_compHBack"></div>
+        <h3 class="tk_compHTitle">我的表扬</h3>
+        <div class="tk_compHMore"></div>
+    </header>-->
+    <ul class="tk_mCTabWrapper clear">
+        <li class="tk_mCTab on">全部</li>
+        <li class="tk_mCTab">待受理</li>
+        <li class="tk_mCTab">受理中</li>
+        <li class="tk_mCTab">待回访</li>
+        <li class="tk_mCTab">已完成</li>
+    </ul>
+    <ul class="tk_topTContent">
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">关于张三同学的服务表扬建议</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">关于张三同学的服务表扬建议</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">关于张三同学的服务表扬建议</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">关于张三同学的服务表扬建议</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">关于张三同学的服务表扬建议</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">关于张三同学的服务表扬建议</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">关于张三同学的服务表扬建议</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">关于张三同学的服务表扬建议</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">关于张三同学的服务表扬建议</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">关于张三同学的服务表扬建议</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">关于张三同学的服务表扬建议</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">关于张三同学的服务表扬建议</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">关于张三同学的服务表扬建议</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">关于张三同学的服务表扬建议</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+        <li class="tk_MCConItem">
+            <a class="tk_MCConItHref" href="javascript:;">
+                <span class="tk_MCConItTitle">关于张三同学的服务表扬建议</span>
+                <div class="tk_MCConItIcon"></div>
+            </a>
+        </li>
+    </ul>
+    <footer class="tk_MCFootWrapper">
+        <div class="tk_MCFoot">
+            <div class="tk_MCFTxtWrapper">
+                <div class="tk_MCFIcon"></div>
+                <div class="tk_MCFTxt">添加表扬</div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script>
+    $(".tk_mCTab").click(function () {
+        $(this).addClass("on").siblings().removeClass("on");
+    });
+    $(".tk_annTabConItem").click(function () {
+        window.location.href = "announcementDetail.html"
+    });
+    $(".tk_topTConItTab:nth-child(2)").click(function () {
+        /*$(".tk_topTConItTIcon").removeClass("on");*/
+        if($(this).children(".tk_topTConItTIcon").hasClass("on")){
+            $(this).children(".tk_topTConItTIcon").removeClass("on");
+            var tk_topTConItTNum = parseInt($(this).children(".tk_topTConItTNum").text());
+            tk_topTConItTNum--;
+            $(this).children(".tk_topTConItTNum").text(tk_topTConItTNum);
+        }else{
+            $(this).children(".tk_topTConItTIcon").addClass("on");
+            var tk_topTConItTNum = parseInt($(this).children(".tk_topTConItTNum").text());
+            tk_topTConItTNum++;
+            $(this).children(".tk_topTConItTNum").text(tk_topTConItTNum);
+        }
+
+    });
+
+</script>
+</body>
+</html>

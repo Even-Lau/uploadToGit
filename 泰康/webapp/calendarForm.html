@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .calendarForm{
+            width: 100%;
+            overflow: hidden;
+        }
+        .selectAll{
+            width: 100%;
+        }
+        .select-item{
+            width: 200px;
+            height: 60px;
+            float: left;
+            padding-top: 15px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            overflow-y: auto;
+        }
+        .select-item select option{
+            height: 20px;
+            overflow-y: auto;
+        }
+        .select-item>div, .select-item select{
+            height: 20px;
+            line-height: 20px;
+            outline: none;
+            float: left;
+        }
+        .select-item>div{
+            margin-right: 15px;
+            font-size: 14px;
+        }
+        .addBtn{
+            float: right;
+            width: 100px;
+            height: 60px;
+        }
+        .addBtn button{
+            background: none;
+            background-color: #009200;
+            color: white;
+            border: none;
+            -webkit-appearance: none;
+            outline: none;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            width: 65px;
+            border-radius: 2px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+        .calendarForm-section{
+            width: 100%;
+            overflow: hidden;
+            overflow-x: auto;
+        }
+        .calendarForm-table{
+            min-width:1900px;
+            border-color: #b7b7b7; border-collapse:collapse;
+        }
+        th,td {
+            border: 1px solid #b7b7b7;
+            text-align: center;
+            font-size: 12px;
+            line-height: 20px;
+        }
+        tbody td{
+            padding: 5px;
+        }
+        tbody td.td-blue{
+            background-color: #2165ff;
+            color: white;
+        }
+        tbody td.td-grue{
+            background-color: #ccc;
+            color: white;
+        }
+        tbody td.operationBtn{
+            color: green;
+            text-decoration: underline;
+            cursor: pointer;
+            user-select: none;
+        }
+        .lastCol{
+            color:red; width: 100px;text-align: center;
+        }
+        .table-data-day{
+            border-bottom: 1px solid #ccc;
+        }
+        .table-data-day,.table-data-ri{
+            display: inline-block;
+            width: 100%;
+            height: 50%;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+<div class="calendarForm">
+    <div class="selectAll">
+        <div class="select-item">
+            <div>项目: </div>
+            <select name="" id="selectProject">
+            </select>
+        </div>
+        <div class="select-item">
+            <div>月份: </div>
+            <select name="" id="selectMonth">
+                <option value="4">2018年4月</option>
+                <option value="6">2018年6月</option>
+                <option value="7">2018年7月</option>
+                <option value="8">2018年8月</option>
+            </select>
+        </div>
+        <div class="addBtn">
+            <button onclick="addTableItem()">+新增</button>
+        </div>
+    </div>
+    <section class="calendarForm-section">
+        <table class="calendarForm-table" border="1" cellpadding="0"cellspacing="0" width="100%">
+            <colgroup id="calendarForm-table-colgroup">
+                <!-- <col span="1"  style="width: 100px">
+                 <col span="3"  style="width: 100px">
+                 <col span="30"  style="width: 50px">
+                 <col span="1" valign="middle" class="lastCol">-->
+            </colgroup>
+            <thead id="calendarForm-table-thead">
+            <tr>
+                <th>序号</th>
+                <th>部门</th>
+                <th>人员</th>
+                <th>职务</th>
+                <th>
+                    <span class="table-data-day">1</span><br/>
+                    <span class="table-data-ri">日</span>
+                </th>
+                <th>
+                    <span class="table-data-day">2</span><br/>
+                    <span class="table-data-ri">一</span>
+                </th>
+                <th>
+                    <span class="table-data-day">3</span><br/>
+                    <span class="table-data-ri">二</span>
+                </th>
+                <th>
+                    <span class="table-data-day">4</span><br/>
+                    <span class="table-data-ri">三</span>
+                </th>
+                <th>
+                    <span class="table-data-day">5</span><br/>
+                    <span class="table-data-ri">四</span>
+                </th>
+                <th>
+                    <span class="table-data-day">7</span><br/>
+                    <span class="table-data-ri">五</span>
+                </th>
+                <th>
+                    <span class="table-data-day">8</span><br/>
+                    <span class="table-data-ri">六</span>
+                </th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="calendarForm-table-tbody">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td class="td-grue">9</td>
+                    <td class="td-blue">10</td>
+                    <td class="operationBtn">x</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+<script>
+    (function (window) {
+        var selectProject =document.getElementById('selectProject'),selectMonth = document.getElementById('selectMonth');
+        var calendarFormTableThead= document.getElementById('calendarForm-table-thead'),colgroup=document.getElementById('calendarForm-table-colgroup');
+        var calendarFormTableTbody=document.getElementById('calendarForm-table-tbody');
+        var months=[],//月份数组
+            projects=[
+                {value:'1',label:'项目1'},
+                {value:'2',label:'项目2'},
+                {value:'3',label:'项目3'},
+                {value:'4',label:'项目4'},
+                {value:'5',label:'项目5'},
+                {value:'6',label:'项目6'},
+            ];//项目数组
+        function select_init(Ele,options){
+            var optionsStr='';
+            for(var i=0; i<options.length;i++){
+                var optionsObj=options[i]
+                optionsStr+=`<option value="${optionsObj.value}">${optionsObj.label}</option>`
+            }
+            Ele.innerHTML=optionsStr
+        }
+        select_init(selectProject,projects)
+        var currentDateObj = new Date()
+        var currentMonth = currentDateObj.getMonth()+1
+        var currentYear= currentDateObj.getFullYear()
+        var yearNum = 3
+        for (var i = 0; i<yearNum; i++ ){
+            if(i==0){
+                for(var i_=12;i_>0;i_--){
+                    if(i_<=currentMonth){
+                        months.push({
+                            value:currentYear+'-'+i_,
+                            label:currentYear+'年'+i_+'月'
+                        })
+                    }
+                }
+            }else {
+                var year_ = currentYear-i
+                for(var i_=12;i_>0;i_--){
+                    months.push({
+                        value:year_+'-'+i_,
+                        label:year_+'年'+i_+'月'
+                    })
+                }
+            }
+
+        }
+        select_init(selectMonth,months)
+        function getDates(month){
+            calendarFormTableThead.innerHTML=''
+            calendarFormTableTbody.innerHTML=''
+            colgroup.innerHTML=''
+            var getDates_dates=[],
+                weeks=['日','一','二','三','四','五','六'],
+                str=`<tr><th>序号</th><th>部门</th><th>人员</th><th>职务</th>`;//表头字符串
+            var getDates_year = month.split('-')[0],getDates_month= month.split('-')[1],dayNumber=31;
+            dayNumber=new Date(getDates_year,getDates_month,0).getDate();
+            for(var i=1;i<=dayNumber;i++){
+                var obj_={
+                    date:i,
+                    week:weeks[new Date(getDates_year+'-'+getDates_month+'-'+i).getDay()]
+                }
+                getDates_dates.push(obj_)
+                str+=`<th>
+                <span class="table-data-day">${obj_.week}</span><br/>
+                <span class="table-data-ri">${obj_.date}</span>
+            </th>`
+            }
+            str+=` <th>操作</th></tr>`
+            colgroup.innerHTML=`<col span="1"  style="width: 80px">
+            <col span="3"  style="width: 100px">
+            <col span="${dayNumber}"  style="width: 40px">
+            <col span="1" valign="middle" class="lastCol">`
+            calendarFormTableThead.innerHTML=str//添加表头
+
+            //表格数据数组
+            var dataList=[
+                {
+                    num:'1',//序号
+                    department:'组织部',//部门
+                    name:'老王1',
+                    position:'职员1',//职位
+                },
+                {
+                    num:'1',
+                    department:'宣传部',
+                    name:'老王6',
+                    position:'职员2',
+                },
+                {
+                    num:'1',
+                    department:'外卖部',
+                    name:'老王2',
+                    position:'职员3',
+                },
+                {
+                    num:'1',
+                    department:'外请部',
+                    name:'老王3',
+                    position:'职员4',
+                },
+            ];
+            //表格body字符串
+            var str_='<tr>'
+            for(var j=0;j<dataList.length;j++){
+                str_+='<tr>'
+                var dataListItem=dataList[0]
+                for(var key in dataListItem){
+                    str_+=`<td>${dataListItem[key]}</td>`
+                }
+                for(var i=1;i<=dayNumber;i++){
+                    if(i%(Math.floor(Math.random()*10))==0){
+                        str_+=`<td class="td-blue">夜</td>`
+                    }else if(i%(Math.floor(Math.random()*10))==0){
+                        str_+=`<td class="td-grue">白</td>`
+                    }else {
+                        str_+=`<td class="">${i}</td>`
+                    }
+                }
+                str_+='<td class="operationBtn" onclick=abc('+j+')>Ｘ</td></tr>'
+            }
+            calendarFormTableTbody.innerHTML=str_
+        }
+        getDates(currentYear+'-'+currentMonth)
+        selectProject.onchange=function (){
+            console.log(selectProject.value)
+        }
+        selectMonth.onchange=function (){
+            console.log(selectMonth.value)
+            getDates(selectMonth.value)
+        }
+        window.abc=function (par) {
+            console.log(par,'点击操作')
+        }
+        window.addTableItem=function () {
+            console.log('新增')
+        }
+    }(window))
+
+</script>
+</body>
+</html>

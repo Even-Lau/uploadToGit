@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>访客确认</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="style/layout.css">
+    <style>
+        html,body{
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="tk_complain">
+    <ul class="tk_compMenu">
+        <li class="tk_compItem clear">
+            <span class="tk_compItemN">姓名</span>
+            <span class="tk_compItemD">小明同学</span>
+        </li>
+        <li class="tk_compItem clear">
+            <span class="tk_compItemN">手机号码</span>
+            <span class="tk_compItemD">13800138000</span>
+        </li>
+        <li class="tk_compItem clear">
+            <span class="tk_compItemN">身份证号码</span>
+            <span class="tk_compItemD">4235118951496464</span>
+        </li>
+    </ul>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <section class="tk_RTopPicWrapper">
+            <div class="tk_RTopPicTitle">上传身份证正面照片</div>
+            <ul class="tk_vADPicMenu clear">
+                <li class="tk_vADPicItem uploadIDCard">
+                    <i class="tk_vADPicItIcon"></i>
+                    <span class="tk_vADPicItTxt">上传照片</span>
+                    <input class="tk_vADPicItIpt" type="file" accept="image/*" name="imageAttach"
+                           >
+                </li>
+                <li class="tk_vADPicItem"></li>
+            </ul>
+        </section>
+        <section class="tk_RTopPicWrapper">
+            <div class="tk_RTopPicTitle">上传照片</div>
+            <ul class="tk_vADPicMenu clear">
+                <li class="tk_vADPicItem uploadIDCard">
+                    <i class="tk_vADPicItIcon"></i>
+                    <span class="tk_vADPicItTxt">上传照片</span>
+                    <input class="tk_vADPicItIpt" type="file" accept="image/*" name="imageAttach"
+                           >
+                </li>
+                <li class="tk_vADPicItem another"></li>
+            </ul>
+        </section>
+        <section class="tk_vCMsgWrapper clear">
+            <i class="tk_vCMsgIcon"></i>
+            <span class="tk_vCMsg">请按范例上传图片</span>
+        </section>
+        <footer class="tk_compBtnWrapper">
+            <button class="tk_compBtn" type="button">提交</button>
+        </footer>
+    </form>
+</div>
+<div class="tk_compPopUpWrapper none">
+    <div class="tk_compPopUp">
+        <div class="tk_compPopUpMsg">照片数量不能超过1张！</div>
+        <div class="tk_compPopUpBtnWrapper">
+            <div class="tk_compPopUpBtn">确定</div>
+        </div>
+    </div>
+</div>
+<div class="tk_vCPopUpWrapper">
+    <div class="tk_vCPopUp">
+        <p class="tk_vCPopUpTitle">欢迎访问泰康人寿</p>
+        <img class="tk_vCPopUpImg" src="images/tk_vCPopUpImg.png">
+        <div class="tk_vCPopUpMsg">正在提交，请耐心等待！</div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script>
+
+
+    /*点击camera按钮*/
+
+    var input = document.getElementsByClassName('tk_vADPicItIpt');
+
+
+    var picArr = [];
+
+
+    var targetImage = [];
+    function updateImageDisplay() {
+        var iptParent = this.parentElement;
+        var preview = iptParent.parentElement;
+        var iptlen = preview.children.length;
+        /*var caIpt = document.createElement('input');
+         caIpt.type = "file";
+         caIpt.accept = "image/!*;capture=camera";
+         caIpt.multiple = "multiple";
+         inputWrapper.insertBefore(caIpt, input);*/
+
+
+        var curFiles = this.files;
+        if (this == input) {
+            for (var t = 0; t < curFiles.length; t++) {
+                targetImage.push(this.files[t])
+            }
+        }
+        ;
+        var self = this;
+        console.log(this.name);
+        console.log(curFiles.length);
+        if (curFiles.length === 0) {
+
+            if ($(".tk_vADPicItem").length == 0) {
+
+            }
+
+        } else if (curFiles.length > 1) {
+            /*判断数量*/
+            $(".tk_compPopUpWrapper").removeClass("none").find(".tk_compPopUpMsg").text("多媒体数量不能超过1张！");
+
+
+        } else {
+            /*判断数量*/
+            if (iptlen + curFiles.length > 3) {
+                $(".tk_compPopUpWrapper").removeClass("none").find(".tk_compPopUpMsg").text("多媒体数量不能超过1张！");
+                return;
+            } else {
+                function readAndPreview(file) {
+
+                    // Make sure `file.type` matches our extensions criteria
+                    if (validFileType(file)) {
+
+                        var reader = new FileReader();
+
+                        reader.addEventListener("load", function () {
+
+                            var listItemDelete = document.createElement('div');
+                            listItemDelete.classList.add("tk_RTopPicItDelete");
+                            var listItem = document.createElement('li');
+                            listItem.classList.add("tk_vADPicItem");
+
+                            /*判断文件类型*/
+                            switch (self.name) {
+                                case "imageAttach":
+                                    if (/image\/(jpe?g|png|gif)$/i.test(file.type)) {
+                                        listItem.style.backgroundImage = "url(" + this.result + ")";
+
+                                        picArr.push(this.result);
+                                        listItem.appendChild(listItemDelete);
+                                        listItem.classList.add("tk_compPicItImg_bg");
+                                        //preview.appendChild(listItem);
+                                        preview.insertBefore(listItem, iptParent);
+                                        /*doUpload();*/
+                                    } else {
+                                        $(".tk_compPopUpWrapper").removeClass("none").find(".tk_compPopUpMsg").text("只能上传图片！");
+                                    }
+                                    ;
+                                    break;
+                            }
+                            ;
+
+
+                        }, false);
+
+                        reader.readAsDataURL(file);
+                    }
+
+                };
+
+                if (curFiles) {
+                    [].forEach.call(curFiles, readAndPreview);
+                }
+                ;
+                console.log(picArr);
+            }
+
+        }
+        ;
+        /*input.addEventListener('change', updateImageDisplay);*/
+    };
+
+    for(var i=0,len=input.length;i<len;i++){
+        input[i].addEventListener('change', updateImageDisplay);
+    }
+
+
+    var fileTypes = [
+        'image/jpeg',
+        'image/pjpeg',
+        'image/png',
+    ];
+
+    function validFileType(file) {
+        for (var i = 0; i < fileTypes.length; i++) {
+            if (file.type === fileTypes[i]) {
+                return true;
+            }
+        }
+        return false;
+    };
+    /*点击提交按钮*/
+    var submitBtn = document.getElementsByClassName("tk_compBtn")[0];
+    submitBtn.addEventListener("click", doUpload);
+    function doUpload() {
+        /*// 实例化一个AJAX对象
+         var xhr = new XMLHttpRequest();
+
+         xhr.open("POST", "http://gdcyberway.com:8300/crm/weixin/uploadAttachment?fileCategory=imageAttachment", true);
+
+         // 发送表单数据
+         xhr.send(picArr);*/
+        var formData = new FormData($("#uploadForm")[0]);
+        formData.append('audioAttachment', targetAudio);
+        formData.append('videoAttachment', targetVideo);
+        formData.append('imageAttachment', targetImage);
+        $.ajax({
+            url: "http://gdcyberway.com:8300/crm/weixin/uploadAttachment?fileCategory=imageAttachment&callback=callback",
+            type: 'POST',
+            dataType: "JSONP",
+            data: formData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (data) {
+                alert("成功了！");
+            },
+            error: function (data) {
+                alert("失败了！");
+            }
+        });
+    };
+    /*删除图片*/
+    $(".tk_vADPicMenu").on("click", ".tk_RTopPicItDelete", function () {
+        var index = $(this).parents(".tk_vADPicItem").index(".tk_compPicItImg_bg");
+        console.log(index);
+        targetImage.splice(index, 1);
+
+
+        picArr.splice(index, 1);
+        console.log(picArr);
+        var menu = $(this).parents(".tk_vADPicItem").parents(".tk_compPic");
+        $(this).parents(".tk_vADPicItem").remove();
+        if ($(".tk_vADPicItem").length == 0) {
+            menu.siblings(".tk_compPicItMsg").removeClass("none");
+            menu.addClass("none")
+        }
+    });
+    /*关闭弹窗*/
+    $(".tk_compPopUpBtn").click(function () {
+        $(this).parents(".tk_compPopUpWrapper").addClass("none")
+    });
+    //判断设备类型，动态添加capture属性：
+    function getMobileOperatingSystem() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        // Windows Phone must come first because its UA also contains "Android"
+        /*if (/windows phone/i.test(userAgent)) {
+         return "Windows Phone";
+         }*/
+
+        if (/android/i.test(userAgent)) {
+            console.log("android");
+            $(".tk_compCDCamera").children("input[type='file']").attr("capture", "camera");
+            $(".tk_compCDVideo").children("input[type='file']").attr("capture", "camcorder");
+            $(".tk_compCDAudio").children("input[type='file']").attr("capture", "microphone");
+        }
+
+        // iOS detection from: http://stackoverflow.com/a/9039885/177710
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            console.log("iOS");
+            $(".tk_compCDCamera").children("input[type='file']").removeAttr("capture");
+            $(".tk_compCDVideo").children("input[type='file']").removeAttr("capture");
+            $(".tk_compCDAudio").children("input[type='file']").removeAttr("capture");
+        }
+
+        return "unknown";
+    };
+    getMobileOperatingSystem();
+</script>
+</body>
+</html>
