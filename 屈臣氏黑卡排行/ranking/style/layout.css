@@ -1,0 +1,441 @@
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer, section, article, aside, nav, hgroup, address, figure, figcaption, menu, details {
+    display: block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption, th {
+    font-weight: normal;
+}
+
+html, body, fieldset, img, iframe, abbr {
+    border: 0;
+}
+
+i, cite, em, var, address, dfn {
+    font-style: normal;
+}
+
+[hidefocus], summary {
+    outline: 0;
+}
+
+li {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, small {
+    font-size: 100%;
+}
+
+sup, sub {
+    font-size: 83%;
+}
+
+pre, code, kbd, samp {
+    font-family: inherit;
+}
+
+q:before, q:after {
+    content: none;
+}
+
+textarea {
+    overflow: auto;
+    resize: none;
+}
+
+label, summary {
+    cursor: default;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6, em, strong, b {
+    font-weight: 500;
+}
+
+del, ins, u, s, a, a:hover {
+    text-decoration: none;
+}
+
+body, textarea, input, button, select, keygen, legend {
+    font: 0.24rem "微软雅黑", \5b8b\4f53;
+    color: #333;
+    outline: 0;
+}
+
+/*************************************************************************************************8*/
+.idx-date {
+    height: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    opacity: 0.8;
+    font-size: 0.22rem;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+.idx-swiperWrapper {
+    height: 3.00rem;
+    padding: 0 0.4rem;
+}
+
+.idx-slideContent {
+    width: 100%;
+    height: 100%;
+
+    color: #fff;
+    background-color: #231815;
+    border-radius: 0.16rem;
+}
+
+.idx-slideContentLeft {
+    padding: 0.28rem 0 0.28rem 0.40rem;
+    font-size: 0.28rem;
+    line-height: 0.40rem;
+}
+
+.idx-storeNum {
+    margin-right: 0.60rem;
+}
+
+.idx-slideContentRight {
+    width: 0.80rem;
+    height: 0.80rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.none {
+    display: none;
+}
+
+.idx-slideContentRightIpt {
+    -webkit-appearance: none;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/ic_bigstar_yellow.png");
+    background-size: 0.40rem 0.38rem;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.idx-slideTable {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.idx-slideTable th {
+    opacity: 0.8;
+    font-size: 0.22rem;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 0.24rem;
+    padding: 0.20rem 0;
+}
+
+.idx-slideTable td {
+    font-size: 0.24rem;
+    color: #F6ED00;
+    text-align: center;
+    line-height: 0.26rem;
+    padding: 0.15rem 0 0.15rem 0;
+}
+
+.idx-main {
+    width: 6.7rem;
+    margin: 0 auto;
+    border-radius: 0.08rem;
+    background-color: #fff;
+}
+
+.idx-main-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.20rem 0.27rem;
+    background: rgba(255, 255, 255, 0.98);
+    border-top-left-radius: 0.16rem;
+    border-top-right-radius: 0.16rem;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.idx-main-top input {
+    width: 2.80rem;
+    height: 0.60rem;
+    padding: 0 0 0 0.52rem;
+    border: none;
+    background-color: rgba(142, 142, 147, 0.10);
+    border-radius: 0.30rem;
+    background-image: url("../images/ic_search.png");
+    background-size: 0.24rem 0.24rem;
+    background-position: 0.20rem center;
+    background-repeat: no-repeat;
+}
+
+.idx-main-top input::placeholder {
+    font-family: PingFangSC-Regular;
+    font-size: 0.24rem;
+    color: #878D99;
+}
+
+.idx-main-selectWrapper {
+    line-height: 0.30rem;
+}
+
+.idx-main-selectInnerWrapper {
+    background-color: #F6ED00;
+    border-radius: 0.30rem;
+    padding: 0.15rem 0.30rem;
+    background-image: url("../images/bt_triangle.png");
+    background-size: 0.22rem 0.11rem;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.idx-main-selectWrapper a {
+    font-size: 0.22rem;
+    color: #231815;
+}
+
+.idx-main-select {
+    width: 1.70rem;
+    height: 0.44rem;
+    background: #F6ED00;
+    border-radius: 0.22rem;
+    border: none;
+}
+
+.idx-main-tableWrapper {
+    padding: 0 0.1rem;
+    background-color: #fff;
+}
+
+.idx-main-table {
+    width: 100%;
+    padding: 0 0.2rem;
+}
+
+.idx-main-table th {
+    padding: 0.2rem 0;
+    font-size: 0.22rem;
+    color: #585C64;
+    line-height: 0.24rem;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.idx-main-table th:nth-child(2) {
+    width: 37.6%;
+}
+
+.idx-main-href {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.idx-main-href span {
+    font-size: 0.22rem;
+    color: #7C97D0;
+    text-align: center;
+    line-height: 0.24rem;
+}
+
+.idx-main-icon {
+    display: block;
+    width: 0.24rem;
+    height: 0.24rem;
+    background-image: url("../images/ic_question.png");
+    background-size: 0.16rem 0.16rem;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.idx-main-checkbox {
+    display: block;
+    -webkit-appearance: none;
+    border: none;
+    background-color: transparent;
+    width: 0.30rem;
+    height: 0.29rem;
+    margin: 0 auto;
+    background-image: url("../images/ic_smallstar_gray.png");
+    background-size: 0.30rem 0.29rem;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.idx-main-checkbox:checked {
+    background-image: url("../images/ic_smallstar_yellow.png");
+}
+
+.idx-main-table td {
+    padding: 0.2rem 0.15rem;
+    font-size: 0.24rem;
+    color: #222;
+    line-height: 0.26rem;
+    text-align: center;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.idx-main-table td:nth-child(2) {
+    width: 37.6%;
+    padding: 0.20rem 0.15rem;
+
+}
+
+.idx-main-btnOuterWrapper {
+    padding: 0.23rem 0;
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom-left-radius: 0.16rem;
+    border-bottom-right-radius: 0.16rem;
+}
+
+.idx-main-btnWrapper {
+    display: flex;
+    width: 3.4rem;
+    height: 0.55rem;
+    line-height: 0.51rem;
+    margin: 0 auto;
+    border: 0.02rem solid #C0C4CC;
+    border-radius: 0.27rem;
+}
+
+.idx-main-btnWrapper button {
+    flex: 1;
+    -webkit-appearance: none;
+    border: none;
+    background-color: transparent;
+}
+
+.idx-main-btn-iptWrapper {
+    width: 33.333%;
+    height: 100%;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.idx-main-btnWrapper input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    text-align: center;
+}
+
+.idx-footer {
+    padding: 0.10rem 0.4rem;
+    opacity: 0.6;
+    font-size: 0.20rem;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.idx-popUpWrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.idx-popUp {
+    width: 6.70rem;
+    padding: 0.40rem;
+    border-radius: 0.16rem;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.idx-popUp h4 {
+
+    text-align: left;
+    line-height: 0.48rem;
+    font-size: 0.34rem;
+    color: #000;
+}
+
+.idx-popUp p {
+    text-align: left;
+    font-size: 0.28rem;
+    color: #585C64;
+    line-height: 0.48rem;
+    margin-top: 0.20rem;
+}
+
+.idx-popUp p span {
+    font-size: 0.28rem;
+    color: #222;
+    line-height: 0.48rem;
+}
+
+.idx-popUp-close {
+    display: block;
+    width: 0.90rem;
+    height: 0.90rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url("../images/bt_del.png");
+    background-size: 0.30rem 0.30rem;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.popUpWrapper{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+.popUpLoadingImg{
+    width: 0.64rem;
+    height: 0.64rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -0.32rem 0 0 -0.32rem;
+    transform: translate(-50%, -50%);
+    animation: loading 2s linear 0s infinite;
+    transform-origin: center center 0;
+}
+@keyframes loading {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+.idx-main-table-noData{
+    padding: 0.2rem 0;
+    font-size: 0.22rem;
+    color: #585C64;
+    line-height: 0.24rem;
+    text-align: center;
+    border-bottom: 1px solid #f4f4f4;
+}

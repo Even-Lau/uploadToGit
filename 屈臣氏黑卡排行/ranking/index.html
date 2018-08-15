@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>黑卡激活竞赛排行榜</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <script src="js/picker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/layout.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" type="text/css" href="style/swiper.css">
+    <!-- Demo styles -->
+    <style>
+        html, body {
+            height: 100%;
+            background-color: #009E96;
+        }
+
+        .swiper-container {
+            width: 6.7rem;
+            height: 3.0rem;
+        }
+
+        .swiper-wrapper {
+            height: 2.60rem;
+            box-sizing: border-box;
+        }
+
+        .swiper-slide {
+            width: 100%;
+        }
+
+        .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+            bottom: 4px;
+            left: 0;
+            width: 100%;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #000;
+        }
+
+        .picker .picker-panel .picker-choose .confirm {
+            color: #009E96 !important;
+        }
+    </style>
+</head>
+<body>
+<div class="idx-date">6月14日 - 8月13日</div>
+<!--<div class="idx-swiperWrapper">-->
+
+<!--</div>-->
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <!--<div class="swiper-slide">
+            <div class="idx-slideContent">
+                <div class="idx-slideContentLeft">
+                    <div>
+                        <span class="idx-storeNum">2134</span>
+                        <span>GD-GX-HN</span>
+                    </div>
+                    <div>广州天河城门动物园店分店十六个字</div>
+                </div>
+                <div class="idx-slideContentRight">
+                    <input class="idx-slideContentRightIpt" type="checkbox">
+                </div>
+                <table class="idx-slideTable">
+                    <thead>
+                    <tr>
+                        <th>激活率</th>
+                        <th>激活率排名</th>
+                        <th>增长率</th>
+                        <th>增长率排名</th>
+                        <th>综合排名</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>35%</td>
+                        <td>2</td>
+                        <td>23%</td>
+                        <td>4</td>
+                        <td>29</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="idx-slideContent">
+                <div class="idx-slideContentLeft">
+                    <div>
+                        <span class="idx-storeNum">2134</span>
+                        <span>GD-GX-HN</span>
+                    </div>
+                    <div>广州天河城门动物园店分店十六个字</div>
+                </div>
+                <div class="idx-slideContentRight">
+                    <input class="idx-slideContentRightIpt" type="checkbox">
+                </div>
+                <table class="idx-slideTable">
+                    <thead>
+                    <tr>
+                        <th>激活率</th>
+                        <th>激活率排名</th>
+                        <th>增长率</th>
+                        <th>增长率排名</th>
+                        <th>综合排名</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>35%</td>
+                        <td>2</td>
+                        <td>23%</td>
+                        <td>4</td>
+                        <td>29</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>-->
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+<section class="idx-main">
+    <div class="idx-main-top">
+        <input class="idx-main-top-ipt" placeholder="搜索店铺号/店铺名">
+        <div class="idx-main-selectWrapper">
+            <!--<select class="idx-main-select">
+                <option>选择区域</option>
+                <option>区域A</option>
+                <option>区域B</option>
+                <option>区域C</option>
+                <option>区域D</option>
+            </select>
+            <span></span>-->
+            <div class="container idx-main-selectInnerWrapper">
+                <div class="row main">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <a href="#" class="btn btn-info btn-lg active" role="button" id="sel_city">选择区域</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="idx-main-tableWrapper">
+        <table class="idx-main-table">
+            <thead>
+            <tr>
+                <th>关注</th>
+                <th>店铺名称</th>
+                <th>
+                    <a class="idx-main-href" href="javascript:;">
+                        <span>激活率</span>
+                        <i class="idx-main-icon"></i>
+                    </a>
+                    <div class="idx-popUpWrapper none">
+                        <div class="idx-popUp">
+                            <h4>黑卡激活率</h4>
+                            <i class="idx-popUp-close"></i>
+                            <p><span>注释：</span>统计自2018年6月14日起至当前取数日期，该店铺的黑卡会员权益激活率：黑卡会员权益激活人数/店铺黑卡会员购物人数；</p>
+                        </div>
+                    </div>
+                </th>
+                <th>
+                    <a class="idx-main-href" href="javascript:;">
+                        <span>增长率</span>
+                        <i class="idx-main-icon"></i>
+                    </a>
+                    <div class="idx-popUpWrapper none">
+                        <div class="idx-popUp">
+                            <h4>黑卡激活增长率</h4>
+                            <i class="idx-popUp-close"></i>
+                            <p><span>注释：</span>以2018年6月14日至2018年8月6日该店铺<
+                                黑卡激活率>作为对比基准数，统计6月14日起至当前取数日期，该店铺：（当前黑卡激活率%/基准期黑卡激活率%
+                                -1）*100%，得出激活增长率。举例：当前激活率是A，基准期激活率是B，则增长率为（A/B-1）*100%</p>
+                        </div>
+                    </div>
+                </th>
+                <th>
+                    <a class="idx-main-href" href="javascript:;">
+                        <span>综合<br>排名</span>
+                        <i class="idx-main-icon"></i>
+                    </a>
+                    <div class="idx-popUpWrapper none">
+                        <div class="idx-popUp">
+                            <h4>综合排名</h4>
+                            <i class="idx-popUp-close"></i>
+                            <p><span>注释：</span>(黑卡激活率排名+激活增长率排名)/2得出数值，数值越少排名越靠前，当数值相同，则综合排位优先黑卡激活率，最后得出最终竞赛排名。<span>（激活增长率须为正数，排名才有效）</span></p>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            </thead>
+            <tbody class="idx-main-tbody">
+            <!--<tr>
+                <td>
+                    <input class="idx-main-checkbox" type="checkbox" name="focus">
+                </td>
+                <td>广东省广州市天河城门XXXX店分店</td>
+                <td>23%</td>
+                <td>35%</td>
+                <td>594</td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="idx-main-checkbox" type="checkbox" name="focus">
+                </td>
+                <td>广东省广州市天河城门XXXX店分店</td>
+                <td>23%</td>
+                <td>35%</td>
+                <td>594</td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="idx-main-checkbox" type="checkbox" name="focus">
+                </td>
+                <td>广东省广州市天河城门XXXX店分店</td>
+                <td>23%</td>
+                <td>35%</td>
+                <td>594</td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="idx-main-checkbox" type="checkbox" name="focus">
+                </td>
+                <td>广东省广州市天河城门XXXX店分店</td>
+                <td>23%</td>
+                <td>35%</td>
+                <td>594</td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="idx-main-checkbox" type="checkbox" name="focus">
+                </td>
+                <td>广东省广州市天河城门XXXX店分店</td>
+                <td>23%</td>
+                <td>35%</td>
+                <td>594</td>
+            </tr>-->
+
+            </tbody>
+        </table>
+        <div class="idx-main-table-noData none">没有符合条件数据</div>
+    </div>
+    <div class="idx-main-btnOuterWrapper">
+        <div class="idx-main-btnWrapper">
+            <button class="idx-main-btn-prev">上一页</button>
+            <div class="idx-main-btn-iptWrapper">
+                <input class="idx-main-btn-ipt" type="text" value="1">
+            </div>
+            <button class="idx-main-btn-next">下一页</button>
+        </div>
+    </div>
+</section>
+<footer class="idx-footer">数据展示全国排名前600家门店。报表排名仅供参考，最终竞赛排名将在活动结束后，由业务部门统计数据核实公告为准。</footer>
+
+<div class="popUpWrapper" id="loading">
+    <img class="popUpLoadingImg" src="images/loading.png">
+</div>
+
+<!-- Swiper JS -->
+<script src="js/swiper.js" type="text/javascript"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        observer: true,
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+</script>
+<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+<script>
+    //头部时间
+    var currentDate=new Date();
+    var dateOffset = (24*60*60*1000) * 2; //2 days
+    currentDate.setTime(currentDate.getTime() - dateOffset);
+    $(".idx-date").html("6月14日 - "+(currentDate.getMonth()+1)+"月"+(currentDate.getDate())+"日");
+
+    function getRequest() {
+        var url = location.search;
+        var theRequest = {};
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for (var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+            ;
+        }
+        ;
+        console.log(theRequest);
+        return theRequest;
+
+    };
+    var baseUrl = 'http://ob.watsons.com.cn/blackcard/api';
+    // var employeeNo = 'N124GFEFG45FGDFGDF';
+    var employeeNo = getRequest().empno;
+    var pageNum = 1;
+    var totalItemNo;
+    var totalPageNo;
+    var limit = 10;
+    var marketName = '';
+    var regionName = '';
+    var districtName = '';
+    var storeCodeName = '';
+
+
+    var removeDuplicateValuesFinalResult = [];
+
+    function compareTwoArraysAndReturnDuplicateValues(arrA, arrB) {
+
+        var result = arrA.filter(function (val) {
+            return arrB.indexOf(val) != -1;
+        });
+        removeDuplicateValuesFinalResult = result.filter(function (item, pos) {
+            return result.indexOf(item) == pos;
+        });
+        console.log(removeDuplicateValuesFinalResult);
+        $(".idx-main-tbody .idx-main-checkbox").each(function () {
+            if (removeDuplicateValuesFinalResult.includes($(this).attr("data-storecode"))) {
+                $(this).attr("checked", true);
+            } else {
+                $(this).removeAttr("checked");
+            }
+        })
+    }
+
+
+    //获取用户关注列表
+    var getFocusedStoreListUrl = baseUrl + '/empno/stores';
+    var focusedStoreCodeArr = [];
+
+    function getFocusedStoreList() {
+        $.ajax({
+            type: "GET",
+            url: getFocusedStoreListUrl + "?empno=" + employeeNo,
+        }).done(function (result) {
+            console.log(result);
+            if (result.code == 0) {
+                if (result.data.length == 0) {
+                    $(".swiper-container").hide();
+                } else {
+                    var swiperWrapperContent = '';
+                    var swiperWrapperContentItem = '';
+                    result.data.forEach(function (item) {
+                        swiperWrapperContentItem = '<div class="swiper-slide">\n' +
+                            '            <div class="idx-slideContent">\n' +
+                            '                <div class="idx-slideContentLeft">\n' +
+                            '                    <div>\n' +
+                            '                        <span class="idx-storeNum">' + item.store_code + '</span>\n' +
+                            '                        <span>' + item.market_name + '</span>\n' +
+                            '                    </div>\n' +
+                            '                    <div>' + item.store_name + '</div>\n' +
+                            '                </div>\n' +
+                            '                <div class="idx-slideContentRight">\n' +
+                            '                    <input class="idx-slideContentRightIpt" data-storecode="' + item.store_code + '" type="checkbox" checked>\n' +
+                            '                </div>\n' +
+                            '                <table class="idx-slideTable">\n' +
+                            '                    <thead>\n' +
+                            '                    <tr>\n' +
+                            '                        <th>激活率</th>\n' +
+                            '                        <th>激活率排名</th>\n' +
+                            '                        <th>增长率</th>\n' +
+                            '                        <th>增长率排名</th>\n' +
+                            '                        <th>综合排名</th>\n' +
+                            '                    </tr>\n' +
+                            '                    </thead>\n' +
+                            '                    <tbody>\n' +
+                            '                    <tr>\n' +
+                            '                        <td>' + (item.benchmark_period * 100).toFixed(2) + '%</td>' +
+                            '                        <td>' + item.rank + '</td>' +
+                            '                        <td>' + (item.growth * 100).toFixed(2) + '%</td>' +
+                            '                        <td>' + item.rank1 + '</td>' +
+                            '                        <td>' + item.final_rank + '</td>' +
+                            '                    </tr>\n' +
+                            '                    </tbody>\n' +
+                            '                </table>\n' +
+                            '            </div>\n' +
+                            '        </div>';
+                        focusedStoreCodeArr.push(item.store_code);
+                        swiperWrapperContent += swiperWrapperContentItem;
+                    });
+                    $(".swiper-wrapper").html(swiperWrapperContent);
+                    /*compareTwoArraysAndReturnDuplicateValues(focusedStoreCodeArr, storeCodeArr);*/
+                }
+            }
+        });
+    };
+    getFocusedStoreList();
+
+    //获取店铺列表
+    var getStoreListUrl = baseUrl + '/list';
+    var storeCodeArr = [];
+
+    function getStoreList(employeeNo, page, limit, marketName, regionName, districtName, storeCodeName) {
+        if (!storeCodeName) {
+            storeCodeName = '';
+        }
+        ;
+        if (!marketName) {
+            marketName = '';
+        }
+        ;
+        if (!regionName) {
+            regionName = '';
+        }
+        ;
+        if (!districtName) {
+            districtName = '';
+        }
+        ;
+        $.ajax({
+            type: "GET",
+            url: getStoreListUrl + "?empno=" + employeeNo + "&page=" + pageNum + "&limit=" + limit + "&market_name=" + marketName + "&region_name=" + regionName + "&district_name=" + districtName + "&store_code_name=" + storeCodeName,
+        }).done(function (result) {
+            console.log(result);
+            $("#loading").hide();
+            if (result.code == 0 && result.count == 0) {
+                $(".idx-main-tbody").empty();
+                $(".idx-main-table-noData").show();
+            } else if (result.code == 0 && result.count != 0) {
+                $(".idx-main-table-noData").hide();
+                var tbodyContent;
+                totalItemNo = result.count;
+                totalPageNo = Math.ceil(totalItemNo / limit);
+                result.data.forEach(function (item) {
+                    var isChecked = item.is_sub ? "checked" : "";
+                    var tbodyContentItem = '<tr>' +
+                        '                <td>' +
+                        '                    <input class="idx-main-checkbox" ' + isChecked + ' data-storeCode="' + item.store_code + '" data-marketName="' + item.market_name + '" data-benchmarkPeriod="' + item.benchmark_period + '" data-storeName="' + item.store_name + '" data-rank="' + item.rank + '" data-growth="' + item.growth + '" data-rank1="' + item.rank1 + '" data-finalRank="' + item.final_rank + '" type="checkbox" name="focus">' +
+                        '                </td>' +
+                        '                <td>' + item.store_name + '</td>' +
+                        '                <td>' + (item.benchmark_period * 100).toFixed(2) + '%</td>' +
+                        '                <td>' + (item.growth * 100).toFixed(2) + '%</td>' +
+                        '                <td>' + item.final_rank + '</td>' +
+                        '            </tr>';
+                    storeCodeArr.push(item.store_code);
+                    tbodyContent += tbodyContentItem;
+                });
+                $(".idx-main-tbody").html(tbodyContent);
+            }
+
+
+            /*compareTwoArraysAndReturnDuplicateValues(focusedStoreCodeArr, storeCodeArr);*/
+        });
+    };
+    getStoreList(employeeNo, pageNum, limit);
+    //请求下一页
+    $(".idx-main-btn-next").click(function () {
+        if (totalPageNo != 0) {
+            if (pageNum == totalPageNo) {
+                pageNum = totalPageNo;
+                alert("已到达最后一页!")
+            } else {
+                $("#loading").show();
+                pageNum++;
+                getStoreList(employeeNo, pageNum, limit, marketName, regionName, districtName, storeCodeName);
+            }
+            $(this).parents(".idx-main-btnWrapper").find(".idx-main-btn-ipt").val(pageNum);
+        }
+
+    });
+    //请求上一页
+    $(".idx-main-btn-prev").click(function () {
+        if (pageNum == 1) {
+            pageNum = 1;
+            /*$(this).parents(".idx-main-btnWrapper").find(".idx-main-btn-ipt").val(pageNum);*/
+            $(this).attr("disabled");
+            alert("已到达第一页！")
+        } else if (pageNum > 1) {
+            pageNum--;
+            $("#loading").show();
+            getStoreList(employeeNo, pageNum, limit, marketName, regionName, districtName, storeCodeName);
+        }
+        ;
+        $(this).parents(".idx-main-btnWrapper").find(".idx-main-btn-ipt").val(pageNum);
+    });
+    //选择页数
+    $(".idx-main-btn-ipt").keyup(function(event){
+        if(event.which==13){
+            pageNum = parseInt($(this).val());
+            getStoreList(employeeNo, pageNum, limit, marketName, regionName, districtName, storeCodeName);
+            $(this).blur();
+        }
+    });
+    $(".idx-main-btn-ipt").blur(function () {
+        pageNum = parseInt($(this).val());
+        getStoreList(employeeNo, pageNum, limit, marketName, regionName, districtName, storeCodeName);
+    });
+    //搜索店铺号/店铺名称
+    $(".idx-main-top-ipt").keyup(function(event){
+        if(event.which==13){
+            nameEl.innerText = '选择区域';
+            storeCodeName = $(this).val();
+            console.log(storeCodeName);
+            getStoreList(employeeNo, pageNum, limit, '', '', '', storeCodeName);
+            $(this).blur();
+        }
+    });
+    $(".idx-main-top-ipt").blur(function () {
+        nameEl.innerText = '选择区域';
+        storeCodeName = $(this).val();
+        console.log(storeCodeName);
+        getStoreList(employeeNo, pageNum, limit, '', '', '', storeCodeName);
+    });
+
+    //关注、取消关注店铺
+    var postFocusedStoreListUrl = baseUrl + '/subscribe/update';
+
+    function postFocusedStoreList(employeeNo, focusStore, storecode) {
+        $.ajax({
+            type: "POST",
+            url: postFocusedStoreListUrl,
+            data: {
+                empno: employeeNo,
+                type: focusStore,
+                store_code: storecode,
+            },
+            contentType: "application/x-www-form-urlencoded",
+        }).done(function (result) {
+            console.log("post成功");
+            getFocusedStoreList();
+            /*getStoreList(page, limit, regionName, storeCodeName);*/
+            getStoreList(employeeNo, pageNum, limit);
+            /*compareTwoArraysAndReturnDuplicateValues(focusedStoreCodeArr, storeCodeArr);*/
+        });
+    };
+    /*table中关注、取消关注店铺事件*/
+    $(".idx-main-tbody").on("change", ".idx-main-checkbox", function () {
+        var storecode = parseInt($(this).attr("data-storecode"));
+        /*var marketname=$(this).attr("data-marketname");
+        var benchmarkperiod=$(this).attr("data-benchmarkperiod");
+        var storeName=$(this).attr("data-storeName");
+        var rank=$(this).attr("data-rank");
+        var growth=$(this).attr("data-growth");
+        var rank1=$(this).attr("data-rank1");
+        var finalrank=$(this).attr("data-finalrank");*/
+        if ($(this).is(':checked')) {
+            /*focusedStoreCodeArr.push(storecode);
+            console.log("focusedStoreCodeArr:pussh "+focusedStoreCodeArr)*/
+            /*compareTwoArraysAndReturnDuplicateValues(focusedStoreCodeArr, storeCodeArr);*/
+            $(".swiper-container").show();
+            var focusStore = 1;
+            postFocusedStoreList(employeeNo, focusStore, storecode);
+            /*getFocusedStoreList();*/
+            /*var slideContent='<div class="swiper-slide">' +
+                '            <div class="idx-slideContent">' +
+                '                <div class="idx-slideContentLeft">' +
+                '                    <div>' +
+                '                        <span class="idx-storeNum">'+storecode+'</span>' +
+                '                        <span>'+marketname+'</span>' +
+                '                    </div>' +
+                '                    <div>'+storeName+'</div>' +
+                '                </div>' +
+                '                <div class="idx-slideContentRight">' +
+                '                    <input class="idx-slideContentRightIpt" type="checkbox">' +
+                '                </div>' +
+                '                <table class="idx-slideTable">' +
+                '                    <thead>' +
+                '                    <tr>' +
+                '                        <th>激活率</th>' +
+                '                        <th>激活率排名</th>' +
+                '                        <th>增长率</th>' +
+                '                        <th>增长率排名</th>' +
+                '                        <th>综合排名</th>' +
+                '                    </tr>' +
+                '                    </thead>' +
+                '                    <tbody>' +
+                '                    <tr>' +
+                '                        <td>'+benchmarkperiod+'</td>' +
+                '                        <td>'+rank+'</td>' +
+                '                        <td>'+growth+'</td>' +
+                '                        <td>'+rank1+'</td>' +
+                '                        <td>'+finalrank+'</td>' +
+                '                    </tr>' +
+                '                    </tbody>' +
+                '                </table>' +
+                '            </div>' +
+                '        </div>'
+            $(".swiper-wrapper").append(slideContent);*/
+            swiper.init();
+        } else {
+            /*var index = focusedStoreCodeArr.indexOf(storecode);
+            if (index > -1) {
+                focusedStoreCodeArr.splice(index, 1);
+            };
+            console.log("focusedStoreCodeArr:splice "+focusedStoreCodeArr)*/
+            /*compareTwoArraysAndReturnDuplicateValues(focusedStoreCodeArr, storeCodeArr);*/
+            var focusStore = 2;
+            postFocusedStoreList(employeeNo, focusStore, storecode);
+            /*getFocusedStoreList();*/
+            /*getStoreList(1, 10, '', '');*/
+            swiper.init();
+        }
+    });
+    /*顶部取消关注店铺事件*/
+    $(".swiper-container").on("change", ".idx-slideContentRightIpt", function () {
+        //$(this).parents(".swiper-slide").remove();
+        /*$(".swiper-pagination-bullet").eq($(this).parents(".swiper-slide").index()).remove()*/
+        var storecode = parseInt($(this).attr("data-storecode"));
+        if (!$(this).is(':checked')) {
+            var focusStore = 2;
+            postFocusedStoreList(employeeNo, focusStore, storecode);
+            /*focusedStoreCodeArr.shift();
+            compareTwoArraysAndReturnDuplicateValues(focusedStoreCodeArr, storeCodeArr);*/
+            /*getFocusedStoreList();
+            getStoreList(pageNum, 10);*/
+            /*var slideContent='<div class="swiper-slide">' +
+                '            <div class="idx-slideContent">' +
+                '                <div class="idx-slideContentLeft">' +
+                '                    <div>' +
+                '                        <span class="idx-storeNum">'+storecode+'</span>' +
+                '                        <span>'+marketname+'</span>' +
+                '                    </div>' +
+                '                    <div>'+storeName+'</div>' +
+                '                </div>' +
+                '                <div class="idx-slideContentRight">' +
+                '                    <input class="idx-slideContentRightIpt" type="checkbox">' +
+                '                </div>' +
+                '                <table class="idx-slideTable">' +
+                '                    <thead>' +
+                '                    <tr>' +
+                '                        <th>激活率</th>' +
+                '                        <th>激活率排名</th>' +
+                '                        <th>增长率</th>' +
+                '                        <th>增长率排名</th>' +
+                '                        <th>综合排名</th>' +
+                '                    </tr>' +
+                '                    </thead>' +
+                '                    <tbody>' +
+                '                    <tr>' +
+                '                        <td>'+benchmarkperiod+'</td>' +
+                '                        <td>'+rank+'</td>' +
+                '                        <td>'+growth+'</td>' +
+                '                        <td>'+rank1+'</td>' +
+                '                        <td>'+finalrank+'</td>' +
+                '                    </tr>' +
+                '                    </tbody>' +
+                '                </table>' +
+                '            </div>' +
+                '        </div>'
+            $(".swiper-wrapper").append(slideContent);*/
+            swiper.init();
+        }
+    });
+</script>
+<script>
+
+    $(".idx-main-href").click(function () {
+        $(this).siblings(".idx-popUpWrapper").removeClass("none")
+    });
+    $(".idx-popUp-close").click(function () {
+        $(this).parents(".idx-popUpWrapper").addClass("none")
+    });
+
+
+</script>
+
+<script src="js/city.js"></script>
+<script>
+    var nameEl = document.getElementById('sel_city');
+    var first = [];
+    /* 省，直辖市 */
+    var second = [];
+    /* 市 */
+    var third = [];
+    /* 镇 */
+    var selectedIndex = [0, 0, 0];
+    /* 默认选中的地区 */
+    var checked = [0, 0, 0];
+
+    /* 已选选项 */
+    function creatList(obj, list) {
+        /*obj.forEach(function (item, index, arr) {
+            var temp = new Object();
+            temp.text = item.name;
+            temp.value = index;
+            list.push(temp);
+        });*/
+
+        for (var i = 0, len = obj.length; i < len; i++) {
+            var temp = new Object();
+            temp.text = obj[i].name;
+            temp.value = i;
+            list.push(temp);
+        }
+    };
+
+    function getRegionChineseName(str) {
+        var result = str.match(/\(([^(]*)\)/);
+        if (result) {
+            console.log(result[1])
+        }
+        ;
+        return result;
+    };
+    creatList(city, first);
+
+    if (city[selectedIndex[0]].hasOwnProperty('sub')) {
+        creatList(city[selectedIndex[0]].sub, second);
+    } else {
+        second = [{text: '', value: 0}];
+    }
+    if (city[selectedIndex[0]].sub[selectedIndex[1]].hasOwnProperty('sub')) {
+        creatList(city[selectedIndex[0]].sub[selectedIndex[1]].sub, third);
+    } else {
+        third = [{text: '', value: 0}];
+    }
+    var picker = new Picker({
+        data: [first, second, third],
+        selectedIndex: selectedIndex,
+        title: '地址选择'
+    });
+    picker.on('picker.select', function (selectedVal, selectedIndex) {
+        var text1 = first[selectedIndex[0]].text;
+        var text2 = second[selectedIndex[1]].text;
+        var text3 = third[selectedIndex[2]] ? third[selectedIndex[2]].text : '';
+        nameEl.innerText = text1 + ' ' + text2 + ' ' + text3;
+
+        //根据地址筛选
+        marketName = text1;
+        regionName = text2;
+        districtName = text3;
+        if(text1==''&&text2==''&&text3==''){
+            nameEl.innerText = '选择区域';
+            getStoreList(employeeNo, pageNum, limit);
+        }else{
+            pageNum=1;
+            $(".idx-main-btn-ipt").val("1");
+            getStoreList(employeeNo, pageNum, limit, marketName, regionName, districtName);
+        }
+    });
+    picker.on('picker.change', function (index, selectedIndex) {
+        if (index === 0) {
+            firstChange();
+        } else if (index === 1) {
+            secondChange();
+        }
+
+        function firstChange() {
+            second = [];
+            third = [];
+            checked[0] = selectedIndex;
+            var firstCity = city[selectedIndex];
+            if (firstCity.hasOwnProperty('sub')) {
+                creatList(firstCity.sub, second);
+                var secondCity = city[selectedIndex].sub[0]
+                if (secondCity.hasOwnProperty('sub')) {
+                    creatList(secondCity.sub, third);
+                } else {
+                    third = [{text: '', value: 0}];
+                    checked[2] = 0;
+                }
+            } else {
+                second = [{text: '', value: 0}];
+                third = [{text: '', value: 0}];
+                checked[1] = 0;
+                checked[2] = 0;
+            }
+            picker.refillColumn(1, second);
+            picker.refillColumn(2, third);
+            picker.scrollColumn(1, 0)
+            picker.scrollColumn(2, 0)
+        }
+
+        function secondChange() {
+            third = [];
+            checked[1] = selectedIndex;
+            var first_index = checked[0];
+            if (city[first_index].sub[selectedIndex].hasOwnProperty('sub')) {
+                var secondCity = city[first_index].sub[selectedIndex];
+                creatList(secondCity.sub, third);
+                picker.refillColumn(2, third);
+                picker.scrollColumn(2, 0)
+            } else {
+                third = [{text: '', value: 0}];
+                checked[2] = 0;
+                picker.refillColumn(2, third);
+                picker.scrollColumn(2, 0)
+            }
+        }
+    });
+    picker.on('picker.valuechange', function (selectedVal, selectedIndex) {
+        console.log(selectedVal);
+        console.log(selectedIndex);
+    });
+    nameEl.addEventListener('click', function () {
+        $(".idx-main-top-ipt").val('');
+        picker.show();
+    });
+</script>
+</body>
+</html>
