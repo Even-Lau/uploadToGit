@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="stylesheet" href="style/layout.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="index">
+    <aside class="idx-aside">
+        <div class="idx-aside-top">
+            <img class="idx-aside-logo" src="images/login-logo.png">
+            <span class="idx-aside-top-txt">OTO System</span>
+        </div>
+        <ul class="idx-menu">
+            <li class="idx-item">
+                <div class="idx-item-name-wrapper active slideDown">
+                    <i class="idx-item-icon" style="background-image: url('images/idx-item-icon-home.png')"></i>
+                    <span class="idx-item-name">系统首页</span>
+                    <i class="idx-item-arrow"></i>
+                </div>
+                <ul class="idx-subMenu">
+                    <li class="idx-subItem active">
+                        <a class="idx-subItemHref" href="index.html">首页</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="applyForProject.html">项目申请</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="applyForProjectList.html">项目申请列表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="assignCouponEdit.html">配券编辑</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="payBillReportOverview.html">账单报表总览</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="rollEdit.html">角色编辑</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="rollManageList.html">角色管理列表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="setManage.html">角色管理列表</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="idx-item">
+                <div class="idx-item-name-wrapper">
+                    <i class="idx-item-icon" style="background-image: url('images/idx-item-icon-chart.png')"></i>
+                    <span class="idx-item-name">自动报表分析</span>
+                    <i class="idx-item-arrow"></i>
+                </div>
+                <ul class="idx-subMenu none">
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">活动效果分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">购物行为分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">购物篮分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">消费者行为分析报表</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="idx-item">
+                <div class="idx-item-name-wrapper">
+                    <i class="idx-item-icon" style="background-image: url('images/idx-item-icon-bill.png')"></i>
+                    <span class="idx-item-name">项目账单配券管理</span>
+                    <i class="idx-item-arrow"></i>
+                </div>
+                <ul class="idx-subMenu none">
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">活动效果分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">购物行为分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">购物篮分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">消费者行为分析报表</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="idx-item">
+                <div class="idx-item-name-wrapper">
+                    <i class="idx-item-icon" style="background-image: url('images/idx-item-icon-set.png')"></i>
+                    <span class="idx-item-name">系统管理</span>
+                    <i class="idx-item-arrow"></i>
+                </div>
+                <ul class="idx-subMenu none">
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">活动效果分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">购物行为分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">购物篮分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">消费者行为分析报表</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="idx-item">
+                <div class="idx-item-name-wrapper">
+                    <i class="idx-item-icon" style="background-image: url('images/idx-item-icon-signal.png')"></i>
+                    <span class="idx-item-name">主数据管理</span>
+                    <i class="idx-item-arrow"></i>
+                </div>
+                <ul class="idx-subMenu none">
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">配券数据管理</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">账单数据管理</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">SKU数据管理</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">商家接受情况数据</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="idx-item">
+                <div class="idx-item-name-wrapper">
+                    <i class="idx-item-icon" style="background-image: url('images/idx-item-icon-face.png')"></i>
+                    <span class="idx-item-name">其他内容管理</span>
+                    <i class="idx-item-arrow"></i>
+                </div>
+                <ul class="idx-subMenu none">
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">配券数据管理</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">账单数据管理</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">SKU数据管理</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">商家接受情况数据</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <header class="idx-header">
+        <div class="idx-header-content">
+            <span class="idx-header-welcome">欢迎您！超级管理员</span>
+            <a class="idx-avatar-wrapper" href="javascript:;">
+                <div class="idx-header-avatar"></div>
+                <span class="idx-header-name">John Smith</span>
+            </a>
+            <a class="idx-logOut-wrapper" href="login.html">
+                <i class="idx-header-back"></i>
+                <span class="idx-header-logOut">退出</span>
+            </a>
+        </div>
+    </header>
+    <section class="idx-top">
+        <h3 class="idx-top-left">OTO System</h3>
+        <div class="idx-top-right clear">
+            <i class="idx-top-icon"></i>
+            <div class="idx-top-address">
+                <a href="javascript:;">首页 > </a>
+                <a href="javascript:;">分类 > </a>
+                <a href="javascript:;">内容</a>
+            </div>
+        </div>
+    </section>
+    <section class="idx-main">
+        <div class="idx-main-top">
+            <h4 class="idx-main-top-tit">OTO System 为数据而生</h4>
+            <p class="idx-main-top-para"><span class="idx-main-top-msg">提示</span>OTO System
+                包含了自动报表分析功能、账单报表统计功能、项目管理功能、配券管理功能、系统用户角色权限功能、为宝洁在数据上的维护和管理提供了更好的支持，大幅度提高工作效率。</p>
+        </div>
+        <ul class="idx-main-data-menu clear">
+            <li class="idx-main-data-item" style="background-color: #00b07d;">
+                <a class="idx-main-data-iconWrapper" href="javascript:;">销售额</a>
+                <div class="idx-main-dataWrapper">
+                    <span class="idx-main-data-name">昨日：<i>2446</i></span>
+                    <span class="idx-main-data-num">累计：<i>10663</i></span>
+                </div>
+                <!--<a class="idx-main-data-iconWrapper" href="javascript:;">
+                    <i class="idx-main-data-icon"></i>
+                </a>-->
+            </li>
+            <li class="idx-main-data-item" style="background-color: #d74d54;">
+                <a class="idx-main-data-iconWrapper" href="javascript:;">领 券 数</a>
+                <div class="idx-main-dataWrapper">
+                    <span class="idx-main-data-name">昨日：<i>2446</i></span>
+                    <span class="idx-main-data-num">累计：<i>10663</i></span>
+                </div>
+
+            </li>
+            <li class="idx-main-data-item" style="background-color: #46a4e8;">
+                <a class="idx-main-data-iconWrapper" href="javascript:;">用 券 数</a>
+                <div class="idx-main-dataWrapper">
+                    <span class="idx-main-data-name">昨日：<i>2446</i></span>
+                    <span class="idx-main-data-num">累计：<i>10663</i></span>
+                </div>
+
+            </li>
+            <li class="idx-main-data-item" style="background-color: #a27ac4;">
+                <a class="idx-main-data-iconWrapper" href="javascript:;">活 动 花 费</a>
+                <div class="idx-main-dataWrapper">
+                    <span class="idx-main-data-name">昨日：<i>2446</i></span>
+                    <span class="idx-main-data-num">累计：<i>10663</i></span>
+                </div>
+            </li>
+        </ul>
+        <ul class="idx-main-menu clear">
+            <li class="idx-main-item">
+                <h4 class="idx-main-item-tit">近七天活动销售情况</h4>
+                <div class="idx-main-item-content">
+
+                </div>
+            </li>
+            <li class="idx-main-item">
+                <h4 class="idx-main-item-tit">近七天活动销售情况</h4>
+                <div class="idx-main-item-content">
+                    <table class="idx-main-item-table">
+                        <tr class="idx-main-item-tr">
+                            <th class="idx-main-item-th">人员</th>
+                            <th class="idx-main-item-th">金额</th>
+                            <th class="idx-main-item-th">次数</th>
+                            <th class="idx-main-item-th">效率</th>
+                        </tr>
+                        <tr class="idx-main-item-tr">
+                            <td class="idx-main-item-td">张晓明</td>
+                            <td class="idx-main-item-td">￥3000</td>
+                            <td class="idx-main-item-td">60</td>
+                            <td class="idx-main-item-td">30%</td>
+                        </tr>
+                        <tr class="idx-main-item-tr">
+                            <td class="idx-main-item-td">张晓明</td>
+                            <td class="idx-main-item-td">￥3000</td>
+                            <td class="idx-main-item-td">60</td>
+                            <td class="idx-main-item-td">30%</td>
+                        </tr>
+                        <tr class="idx-main-item-tr">
+                            <td class="idx-main-item-td">张晓明</td>
+                            <td class="idx-main-item-td">￥3000</td>
+                            <td class="idx-main-item-td">60</td>
+                            <td class="idx-main-item-td">30%</td>
+                        </tr>
+                        <tr class="idx-main-item-tr">
+                            <td class="idx-main-item-td">张晓明</td>
+                            <td class="idx-main-item-td">￥3000</td>
+                            <td class="idx-main-item-td">60</td>
+                            <td class="idx-main-item-td">30%</td>
+                        </tr>
+                        <tr class="idx-main-item-tr">
+                            <td class="idx-main-item-td">张晓明</td>
+                            <td class="idx-main-item-td">￥3000</td>
+                            <td class="idx-main-item-td">60</td>
+                            <td class="idx-main-item-td">30%</td>
+                        </tr>
+                        <tr class="idx-main-item-tr">
+                            <td class="idx-main-item-td">张晓明</td>
+                            <td class="idx-main-item-td">￥3000</td>
+                            <td class="idx-main-item-td">60</td>
+                            <td class="idx-main-item-td">30%</td>
+                        </tr>
+                        <tr class="idx-main-item-tr">
+                            <td class="idx-main-item-td">张晓明</td>
+                            <td class="idx-main-item-td">￥3000</td>
+                            <td class="idx-main-item-td">60</td>
+                            <td class="idx-main-item-td">30%</td>
+                        </tr>
+                        <tr class="idx-main-item-tr">
+                            <td class="idx-main-item-td">张晓明</td>
+                            <td class="idx-main-item-td">￥3000</td>
+                            <td class="idx-main-item-td">60</td>
+                            <td class="idx-main-item-td">30%</td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+            <li class="idx-main-item">
+                <h4 class="idx-main-item-tit">渠道核销分布</h4>
+                <div class="idx-main-item-content">
+                    <ul class="idx-main-item-menu">
+                        <li class="idx-main-item-item">
+                            <a class="idx-main-item-href" href="javascript:;"><i class="idx-main-item-icon"></i>示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本</a>
+                        </li>
+                        <li class="idx-main-item-item">
+                            <a class="idx-main-item-href" href="javascript:;"><i class="idx-main-item-icon"></i>示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本</a>
+                        </li>
+                        <li class="idx-main-item-item">
+                            <a class="idx-main-item-href" href="javascript:;"><i class="idx-main-item-icon"></i>示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本</a>
+                        </li>
+                        <li class="idx-main-item-item">
+                            <a class="idx-main-item-href" href="javascript:;"><i class="idx-main-item-icon"></i>示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本</a>
+                        </li>
+                        <li class="idx-main-item-item">
+                            <a class="idx-main-item-href" href="javascript:;"><i class="idx-main-item-icon"></i>示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本</a>
+                        </li>
+                        <li class="idx-main-item-item">
+                            <a class="idx-main-item-href" href="javascript:;"><i class="idx-main-item-icon"></i>示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本</a>
+                        </li>
+                        <li class="idx-main-item-item">
+                            <a class="idx-main-item-href" href="javascript:;"><i class="idx-main-item-icon"></i>示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="idx-main-item">
+                <h4 class="idx-main-item-tit">核销Top20商户</h4>
+                <div class="idx-main-item-content">
+                    <ul class="idx-main-item-menu">
+                        <li class="idx-main-item-item">
+                            <a class="idx-main-item-href" href="javascript:;"><i class="idx-main-item-icon"></i>示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本</a>
+                        </li>
+                        <li class="idx-main-item-item">
+                            <a class="idx-main-item-href" href="javascript:;"><i class="idx-main-item-icon"></i>示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本</a>
+                        </li>
+                        <li class="idx-main-item-item">
+                            <a class="idx-main-item-href" href="javascript:;"><i class="idx-main-item-icon"></i>示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本</a>
+                        </li>
+                        <li class="idx-main-item-item">
+                            <a class="idx-main-item-href" href="javascript:;"><i class="idx-main-item-icon"></i>示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本</a>
+                        </li>
+                        <li class="idx-main-item-item">
+                            <a class="idx-main-item-href" href="javascript:;"><i class="idx-main-item-icon"></i>示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本</a>
+                        </li>
+                        <li class="idx-main-item-item">
+                            <a class="idx-main-item-href" href="javascript:;"><i class="idx-main-item-icon"></i>示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本</a>
+                        </li>
+                        <li class="idx-main-item-item">
+                            <a class="idx-main-item-href" href="javascript:;"><i class="idx-main-item-icon"></i>示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本示例文本</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </section>
+</div>
+<div class="idx-popUpWrapper">
+    <div class="idx-popUp">
+        <div class="idx-popUpTop clear">
+            <span class="idx-popUp-txt fl">配置商家</span>
+            <i class="idx-popUp-icon fr"></i>
+        </div>
+        <ul class="idx-popUp-menu clear">
+            <li class="idx-popUp-item">
+                <input class="idx-popUp-ipt" type="text">
+            </li>
+            <li class="idx-popUp-item">
+                <select class="idx-popUp-slt">
+                    <option>请选择</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                </select>
+            </li>
+            <li class="idx-popUp-item">
+                <select class="idx-popUp-slt">
+                    <option>请选择</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                </select>
+            </li>
+        </ul>
+        <div class="idx-popUp-searchWrapper clear">
+            <div class="idx-popUp-searchLeft clear fl">
+                <input class="idx-popUp-searchCbx fl" type="checkbox">
+                <span class="idx-popUp-searchMsg fl">只看可接受邀请的公司</span>
+            </div>
+            <button class="idx-popUp-searchBtn">搜索</button>
+        </div>
+        <div class="idx-popUp-contentWrapper clear">
+            <div class="idx-popUp-content fl">
+                <div class="idx-popUp-contentTop">
+                    <div class="idx-popUp-searchLeft clear">
+                        <input class="idx-popUp-contentTopCbx fl" type="checkbox">
+                        <span class="idx-popUp-searchMsg fl">全选 共400条</span>
+                    </div>
+                </div>
+                <ul class="idx-popUp-contentMenu">
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="idx-popUp-contentBtnWrapper">
+                <button class="idx-popUp-contentBtn"></button>
+                <button class="idx-popUp-contentBtn"></button>
+            </div>
+            <div class="idx-popUp-content fr">
+                <div class="idx-popUp-contentTop">
+                    <div class="idx-popUp-searchLeft clear">
+                        <input class="idx-popUp-contentTopCbx fl" type="checkbox">
+                        <span class="idx-popUp-searchMsg fl">已选 0条</span>
+                    </div>
+                </div>
+                <ul class="idx-popUp-contentMenu">
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                    <li class="idx-popUp-contentItem clear">
+                        <input class="idx-popUp-contentItemCbx fl" type="checkbox">
+                        <span class="idx-popUp-contentItemTxt">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script>
+    //下拉菜单
+    $(".idx-item-name-wrapper").click(function () {
+
+        $(".idx-subMenu").not($(this).siblings(".idx-subMenu")).slideUp();
+        $(this).siblings(".idx-subMenu").slideToggle();
+
+        $(".idx-item-name-wrapper").not($(this)).removeClass("slideDown");
+        $(this).toggleClass("slideDown");
+    });
+    /*关闭弹窗*/
+    $(".idx-popUp-icon").click(function () {
+        $(this).parents(".idx-popUpWrapper").addClass("none");
+    });
+    //table选中
+    $(".idx-popUp-contentItemCbx").change(function () {
+        if ($(this).parents(".idx-popUp-content").find(".idx-popUp-contentItemCbx:checked").length == $(this).parents(".idx-popUp-content").find(".idx-popUp-contentItemCbx").length) {
+            $(this).parents(".idx-popUp-content").find(".idx-popUp-contentTopCbx").prop("checked", true)
+        } else {
+            $(this).parents(".idx-popUp-content").find(".idx-popUp-contentTopCbx").prop("checked", false)
+        }
+    });
+    $(".idx-popUp-contentTopCbx").change(function () {
+        if ($(this).parents(".idx-popUp-content").find(".idx-popUp-contentTopCbx:checked").length > 0) {
+            $(this).parents(".idx-popUp-content").find(".idx-popUp-contentItemCbx").prop("checked", true)
+        } else {
+            $(this).parents(".idx-popUp-content").find(".idx-popUp-contentItemCbx").prop("checked", false)
+        }
+
+    });
+</script>
+</body>
+</html>

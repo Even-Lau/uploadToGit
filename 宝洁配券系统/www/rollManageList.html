@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>角色管理列表</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="stylesheet" href="style/layout.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="index">
+    <aside class="idx-aside">
+        <div class="idx-aside-top">
+            <img class="idx-aside-logo" src="images/login-logo.png">
+            <span class="idx-aside-top-txt">OTO System</span>
+        </div>
+        <ul class="idx-menu">
+            <li class="idx-item">
+                <div class="idx-item-name-wrapper active slideDown">
+                    <i class="idx-item-icon" style="background-image: url('images/idx-item-icon-home.png')"></i>
+                    <span class="idx-item-name">系统首页</span>
+                    <i class="idx-item-arrow"></i>
+                </div>
+                <ul class="idx-subMenu">
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="index.html">首页</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="applyForProject.html">项目申请</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="applyForProjectList.html">项目申请列表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="assignCouponEdit.html">配券编辑</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="payBillReportOverview.html">账单报表总览</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="rollEdit.html">角色编辑</a>
+                    </li>
+                    <li class="idx-subItem active">
+                        <a class="idx-subItemHref" href="rollManageList.html">角色管理列表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="setManage.html">角色管理列表</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="idx-item">
+                <div class="idx-item-name-wrapper">
+                    <i class="idx-item-icon" style="background-image: url('images/idx-item-icon-chart.png')"></i>
+                    <span class="idx-item-name">自动报表分析</span>
+                    <i class="idx-item-arrow"></i>
+                </div>
+                <ul class="idx-subMenu none">
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">活动效果分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">购物行为分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">购物篮分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">消费者行为分析报表</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="idx-item">
+                <div class="idx-item-name-wrapper">
+                    <i class="idx-item-icon" style="background-image: url('images/idx-item-icon-bill.png')"></i>
+                    <span class="idx-item-name">项目账单配券管理</span>
+                    <i class="idx-item-arrow"></i>
+                </div>
+                <ul class="idx-subMenu none">
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">活动效果分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">购物行为分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">购物篮分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">消费者行为分析报表</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="idx-item">
+                <div class="idx-item-name-wrapper">
+                    <i class="idx-item-icon" style="background-image: url('images/idx-item-icon-set.png')"></i>
+                    <span class="idx-item-name">系统管理</span>
+                    <i class="idx-item-arrow"></i>
+                </div>
+                <ul class="idx-subMenu none">
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">活动效果分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">购物行为分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">购物篮分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">消费者行为分析报表</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="idx-item">
+                <div class="idx-item-name-wrapper">
+                    <i class="idx-item-icon" style="background-image: url('images/idx-item-icon-signal.png')"></i>
+                    <span class="idx-item-name">主数据管理</span>
+                    <i class="idx-item-arrow"></i>
+                </div>
+                <ul class="idx-subMenu none">
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">配券数据管理</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">账单数据管理</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">SKU数据管理</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">商家接受情况数据</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="idx-item">
+                <div class="idx-item-name-wrapper">
+                    <i class="idx-item-icon" style="background-image: url('images/idx-item-icon-face.png')"></i>
+                    <span class="idx-item-name">其他内容管理</span>
+                    <i class="idx-item-arrow"></i>
+                </div>
+                <ul class="idx-subMenu none">
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">配券数据管理</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">账单数据管理</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">SKU数据管理</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">商家接受情况数据</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <header class="idx-header">
+        <div class="idx-header-content">
+            <span class="idx-header-welcome">欢迎您！超级管理员</span>
+            <a class="idx-avatar-wrapper" href="javascript:;">
+                <div class="idx-header-avatar"></div>
+                <span class="idx-header-name">John Smith</span>
+            </a>
+            <a class="idx-logOut-wrapper" href="login.html">
+                <i class="idx-header-back"></i>
+                <span class="idx-header-logOut">退出</span>
+            </a>
+        </div>
+    </header>
+    <section class="idx-top">
+        <h3 class="idx-top-left">角色管理列表</h3>
+        <div class="idx-top-right clear">
+            <i class="idx-top-icon"></i>
+            <div class="idx-top-address">
+                <a href="javascript:;">首页 > </a>
+                <a href="javascript:;">分类 > </a>
+                <a href="javascript:;">内容</a>
+            </div>
+        </div>
+    </section>
+    <section class="idx-main">
+        <div class="rML-main-top clear">
+            <input class="rML-main-top-ipt" type="text" placeholder="请输入关键字">
+            <button class="rML-main-top-btn" style="background-color: #3268ff;">
+                <i class="rML-main-top-icon"
+                   style="background-image: url('images/rML-main-top-icon-search.png');background-size: 14px 14px;"></i>
+                <span class="rML-main-top-txt">查询</span>
+            </button>
+            <button class="rML-main-top-btn" style="background-color: #3268ff;">
+                <i class="rML-main-top-icon"
+                   style="background-image: url('images/rML-main-top-icon-out.png');background-size: 14px 14px;"></i>
+                <span class="rML-main-top-txt">导出</span>
+            </button>
+            <button class="rML-main-top-btn" style="background-color: #00b07d;">
+                <i class="rML-main-top-icon"
+                   style="background-image: url('images/rML-main-top-icon-plus.png');background-size: 12px 12px;"></i>
+                <span class="rML-main-top-txt">新增</span>
+            </button>
+            <button class="rML-main-top-btn" style="background-color: #d74d54;">
+                <i class="rML-main-top-icon"
+                   style="background-image: url('images/rML-main-top-icon-minus.png');background-size: 12px 2px;"></i>
+                <span class="rML-main-top-txt">删除</span>
+            </button>
+        </div>
+        <table class="rML-main-table">
+            <tr class="rML-main-tr">
+                <th class="rML-main-th">
+                    <input class="rML-main-th-ipt" type="checkbox">
+                    <span class="rML-main-th-txt">ID</span>
+                </th>
+                <th class="rML-main-th">角色名称</th>
+                <th class="rML-main-th">角色介绍</th>
+                <th class="rML-main-th">操作</th>
+                <th class="rML-main-th">权限控制</th>
+            </tr>
+            <tr class="rML-main-tr">
+                <td class="rML-main-td">
+                    <input class="rML-main-td-ipt" type="checkbox">
+                    <span class="rML-main-td-txt">01</span>
+                </td>
+                <td class="rML-main-td">超级管理员</td>
+                <td class="rML-main-td">default</td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+            </tr>
+            <tr class="rML-main-tr">
+                <td class="rML-main-td">
+                    <input class="rML-main-td-ipt" type="checkbox">
+                    <span class="rML-main-td-txt">01</span>
+                </td>
+                <td class="rML-main-td">普通用户</td>
+                <td class="rML-main-td">default</td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+            </tr>
+            <tr class="rML-main-tr">
+                <td class="rML-main-td">
+                    <input class="rML-main-td-ipt" type="checkbox">
+                    <span class="rML-main-td-txt">01</span>
+                </td>
+                <td class="rML-main-td">普通用户</td>
+                <td class="rML-main-td">default</td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+            </tr>
+            <tr class="rML-main-tr">
+                <td class="rML-main-td">
+                    <input class="rML-main-td-ipt" type="checkbox">
+                    <span class="rML-main-td-txt">01</span>
+                </td>
+                <td class="rML-main-td">普通用户</td>
+                <td class="rML-main-td">default</td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+            </tr>
+            <tr class="rML-main-tr">
+                <td class="rML-main-td">
+                    <input class="rML-main-td-ipt" type="checkbox">
+                    <span class="rML-main-td-txt">01</span>
+                </td>
+                <td class="rML-main-td">普通用户</td>
+                <td class="rML-main-td">default</td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+            </tr>
+            <tr class="rML-main-tr">
+                <td class="rML-main-td">
+                    <input class="rML-main-td-ipt" type="checkbox">
+                    <span class="rML-main-td-txt">01</span>
+                </td>
+                <td class="rML-main-td">普通用户</td>
+                <td class="rML-main-td">default</td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+            </tr>
+            <tr class="rML-main-tr">
+                <td class="rML-main-td">
+                    <input class="rML-main-td-ipt" type="checkbox">
+                    <span class="rML-main-td-txt">01</span>
+                </td>
+                <td class="rML-main-td">普通用户</td>
+                <td class="rML-main-td">default</td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+            </tr>
+            <tr class="rML-main-tr">
+                <td class="rML-main-td">
+                    <input class="rML-main-td-ipt" type="checkbox">
+                    <span class="rML-main-td-txt">01</span>
+                </td>
+                <td class="rML-main-td">普通用户</td>
+                <td class="rML-main-td">default</td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+            </tr>
+            <tr class="rML-main-tr">
+                <td class="rML-main-td">
+                    <input class="rML-main-td-ipt" type="checkbox">
+                    <span class="rML-main-td-txt">01</span>
+                </td>
+                <td class="rML-main-td">普通用户</td>
+                <td class="rML-main-td">default</td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+            </tr>
+            <tr class="rML-main-tr">
+                <td class="rML-main-td">
+                    <input class="rML-main-td-ipt" type="checkbox">
+                    <span class="rML-main-td-txt">01</span>
+                </td>
+                <td class="rML-main-td">普通用户</td>
+                <td class="rML-main-td">default</td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+            </tr>
+            <tr class="rML-main-tr">
+                <td class="rML-main-td">
+                    <input class="rML-main-td-ipt" type="checkbox">
+                    <span class="rML-main-td-txt">01</span>
+                </td>
+                <td class="rML-main-td">普通用户</td>
+                <td class="rML-main-td">default</td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+            </tr>
+            <tr class="rML-main-tr">
+                <td class="rML-main-td">
+                    <input class="rML-main-td-ipt" type="checkbox">
+                    <span class="rML-main-td-txt">01</span>
+                </td>
+                <td class="rML-main-td">普通用户</td>
+                <td class="rML-main-td">default</td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+            </tr>
+            <tr class="rML-main-tr">
+                <td class="rML-main-td">
+                    <input class="rML-main-td-ipt" type="checkbox">
+                    <span class="rML-main-td-txt">01</span>
+                </td>
+                <td class="rML-main-td">普通用户</td>
+                <td class="rML-main-td">default</td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+            </tr>
+            <tr class="rML-main-tr">
+                <td class="rML-main-td">
+                    <input class="rML-main-td-ipt" type="checkbox">
+                    <span class="rML-main-td-txt">01</span>
+                </td>
+                <td class="rML-main-td">普通用户</td>
+                <td class="rML-main-td">default</td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+                <td class="rML-main-td">
+                    <a class="rML-main-td-href" href="javascript:;">编辑</a>
+                </td>
+            </tr>
+        </table>
+        <div class="rML-main-top clear">
+            <p class="rML-main-bottom-para">第 1/3 页 全部 36 条记录</p>
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">&lt;</a>
+                <a href="#">1</a>
+                <a href="#" class="active">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&gt;</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script>
+    //下拉菜单
+    $(".idx-item-name-wrapper").click(function () {
+
+        $(".idx-subMenu").not($(this).siblings(".idx-subMenu")).slideUp();
+        $(this).siblings(".idx-subMenu").slideToggle();
+
+        $(".idx-item-name-wrapper").not($(this)).removeClass("slideDown");
+        $(this).toggleClass("slideDown");
+    });
+
+    //table选中
+    $(".rML-main-td-ipt").change(function () {
+        if ($(".rML-main-td-ipt:checked").length == $(".rML-main-td-ipt").length) {
+            $(".rML-main-th-ipt").prop("checked", true)
+        } else {
+            $(".rML-main-th-ipt").prop("checked", false)
+        }
+    });
+    $(".rML-main-th-ipt").change(function () {
+        if ($(".rML-main-th-ipt:checked").length > 0) {
+            $(".rML-main-td-ipt").prop("checked", true)
+        } else {
+            $(".rML-main-td-ipt").prop("checked", false)
+        }
+
+    });
+
+</script>
+</body>
+</html>

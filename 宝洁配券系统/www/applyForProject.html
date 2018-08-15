@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目申请</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="stylesheet" href="style/layout.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="index">
+    <aside class="idx-aside">
+        <div class="idx-aside-top">
+            <img class="idx-aside-logo" src="images/login-logo.png">
+            <span class="idx-aside-top-txt">OTO System</span>
+        </div>
+        <ul class="idx-menu">
+            <li class="idx-item">
+                <div class="idx-item-name-wrapper active slideDown">
+                    <i class="idx-item-icon" style="background-image: url('images/idx-item-icon-home.png')"></i>
+                    <span class="idx-item-name">系统首页</span>
+                    <i class="idx-item-arrow"></i>
+                </div>
+                <ul class="idx-subMenu">
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="index.html">首页</a>
+                    </li>
+                    <li class="idx-subItem active">
+                        <a class="idx-subItemHref" href="applyForProject.html">项目申请</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="applyForProjectList.html">项目申请列表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="assignCouponEdit.html">配券编辑</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="payBillReportOverview.html">账单报表总览</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="rollEdit.html">角色编辑</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="rollManageList.html">角色管理列表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="setManage.html">角色管理列表</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="idx-item">
+                <div class="idx-item-name-wrapper">
+                    <i class="idx-item-icon" style="background-image: url('images/idx-item-icon-chart.png')"></i>
+                    <span class="idx-item-name">自动报表分析</span>
+                    <i class="idx-item-arrow"></i>
+                </div>
+                <ul class="idx-subMenu none">
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">活动效果分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">购物行为分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">购物篮分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">消费者行为分析报表</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="idx-item">
+                <div class="idx-item-name-wrapper">
+                    <i class="idx-item-icon" style="background-image: url('images/idx-item-icon-bill.png')"></i>
+                    <span class="idx-item-name">项目账单配券管理</span>
+                    <i class="idx-item-arrow"></i>
+                </div>
+                <ul class="idx-subMenu none">
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">活动效果分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">购物行为分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">购物篮分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">消费者行为分析报表</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="idx-item">
+                <div class="idx-item-name-wrapper">
+                    <i class="idx-item-icon" style="background-image: url('images/idx-item-icon-set.png')"></i>
+                    <span class="idx-item-name">系统管理</span>
+                    <i class="idx-item-arrow"></i>
+                </div>
+                <ul class="idx-subMenu none">
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">活动效果分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">购物行为分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">购物篮分析报表</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">消费者行为分析报表</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="idx-item">
+                <div class="idx-item-name-wrapper">
+                    <i class="idx-item-icon" style="background-image: url('images/idx-item-icon-signal.png')"></i>
+                    <span class="idx-item-name">主数据管理</span>
+                    <i class="idx-item-arrow"></i>
+                </div>
+                <ul class="idx-subMenu none">
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">配券数据管理</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">账单数据管理</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">SKU数据管理</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">商家接受情况数据</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="idx-item">
+                <div class="idx-item-name-wrapper">
+                    <i class="idx-item-icon" style="background-image: url('images/idx-item-icon-face.png')"></i>
+                    <span class="idx-item-name">其他内容管理</span>
+                    <i class="idx-item-arrow"></i>
+                </div>
+                <ul class="idx-subMenu none">
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">配券数据管理</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">账单数据管理</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">SKU数据管理</a>
+                    </li>
+                    <li class="idx-subItem">
+                        <a class="idx-subItemHref" href="javascript:;">商家接受情况数据</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <header class="idx-header">
+        <div class="idx-header-content">
+            <span class="idx-header-welcome">欢迎您！超级管理员</span>
+            <a class="idx-avatar-wrapper" href="javascript:;">
+                <div class="idx-header-avatar"></div>
+                <span class="idx-header-name">John Smith</span>
+            </a>
+            <a class="idx-logOut-wrapper" href="login.html">
+                <i class="idx-header-back"></i>
+                <span class="idx-header-logOut">退出</span>
+            </a>
+        </div>
+    </header>
+    <section class="idx-top">
+        <h3 class="idx-top-left">项目申请</h3>
+        <div class="idx-top-right clear">
+            <i class="idx-top-icon"></i>
+            <div class="idx-top-address">
+                <a href="javascript:;">首页 > </a>
+                <a href="javascript:;">分类 > </a>
+                <a href="javascript:;">内容</a>
+            </div>
+        </div>
+    </section>
+    <section class="idx-main">
+        <div class="rE-main-top">
+            <ul class="sM-main-menu">
+                <li class="sM-main-item">
+                    <ul class="sM-main-subMenu clear">
+                        <li class="sM-main-subItem clear">
+                            <div class="rE-main-item-iptWrapper">
+                                <h5 class="rE-main-item-tit">设置指定数量：</h5>
+                                <input class="rE-main-item-ipt" type="text">
+                            </div>
+                        </li>
+                        <li class="sM-main-subItem clear">
+                            <div class="rE-main-item-iptWrapper">
+                                <h5 class="rE-main-item-tit">设置添加提醒人：</h5>
+                                <input class="rE-main-item-ipt" type="text">
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sM-main-item">
+                    <ul class="sM-main-subMenu clear">
+                        <li class="sM-main-subItem clear">
+                            <div class="rE-main-item-iptWrapper">
+                                <h5 class="rE-main-item-tit">设置指定数量：</h5>
+                                <input class="rE-main-item-ipt" type="text">
+                            </div>
+                        </li>
+                        <li class="sM-main-subItem clear">
+                            <div class="rE-main-item-iptWrapper">
+                                <h5 class="rE-main-item-tit">设置添加提醒人：</h5>
+                                <input class="rE-main-item-ipt" type="text">
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sM-main-item">
+                    <ul class="sM-main-subMenu clear">
+                        <li class="sM-main-subItem">
+                            <div class="rE-main-item-iptWrapper clear">
+                                <h5 class="rE-main-item-tit fl">选择导入文件：</h5>
+                                <div class="aCE-main-item-fileWrapper">
+                                    <i class="aCE-main-item-fileIcon"></i>
+                                    <span class="aCE-main-item-fileTxt">点击此处上传附件</span>
+                                    <input class="aCE-main-item-file" type="file" multiple>
+                                </div>
+                            </div>
+                            <div class="aFP-main-item-titWrapper clear">
+                                <a class="aFP-main-item-download clear" href="javascript:;">
+                                    <i class="aFP-main-item-dld-icon"></i>
+                                    <span class="aFP-main-item-dld-txt">下载项目明细导入模板</span>
+                                </a>
+                            </div>
+
+                            <ul class="aCE-picMenu preview clear none"></ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sM-main-item">
+                    <ul class="sM-main-subMenu clear">
+                        <li class="sM-main-subItem" style="width: 100%;">
+                            <h5 class="rE-main-item-tit">项目明细：</h5>
+                            <table class="rML-main-table">
+                                <tr class="rML-main-tr">
+                                    <th class="rML-main-th">
+                                        <span class="rML-main-th-txt">Coupon-BU Customer </span>
+                                    </th>
+                                    <th class="rML-main-th">Platforms</th>
+                                    <th class="rML-main-th">Coupon unit pric</th>
+                                    <th class="rML-main-th">Planned coupon</th>
+                                    <th class="rML-main-th">Planned budget - coupon</th>
+                                    <th class="rML-main-th">Planned budgettax</th>
+                                    <th class="rML-main-th">TTL budget</th>
+                                </tr>
+                                <tr class="rML-main-tr">
+                                    <td class="rML-main-td">
+                                        <span class="rML-main-td-txt">Laundry</span>
+                                    </td>
+                                    <td class="rML-main-td">Koubei</td>
+                                    <td class="rML-main-td">200</td>
+                                    <td class="rML-main-td">default</td>
+                                    <td class="rML-main-td">400</td>
+                                    <td class="rML-main-td">default</td>
+                                    <td class="rML-main-td">formula</td>
+                                </tr>
+                                <tr class="rML-main-tr">
+                                    <td class="rML-main-td">
+                                        <span class="rML-main-td-txt">Laundry</span>
+                                    </td>
+                                    <td class="rML-main-td">Koubei</td>
+                                    <td class="rML-main-td">200</td>
+                                    <td class="rML-main-td">default</td>
+                                    <td class="rML-main-td">400</td>
+                                    <td class="rML-main-td">default</td>
+                                    <td class="rML-main-td">formula</td>
+                                </tr>
+                                <tr class="rML-main-tr">
+                                    <td class="rML-main-td">
+                                        <span class="rML-main-td-txt">Laundry</span>
+                                    </td>
+                                    <td class="rML-main-td">Koubei</td>
+                                    <td class="rML-main-td">200</td>
+                                    <td class="rML-main-td">default</td>
+                                    <td class="rML-main-td">400</td>
+                                    <td class="rML-main-td">default</td>
+                                    <td class="rML-main-td">formula</td>
+                                </tr>
+                                <tr class="rML-main-tr">
+                                    <td class="rML-main-td">
+                                        <span class="rML-main-td-txt">Laundry</span>
+                                    </td>
+                                    <td class="rML-main-td">Koubei</td>
+                                    <td class="rML-main-td">200</td>
+                                    <td class="rML-main-td">default</td>
+                                    <td class="rML-main-td">400</td>
+                                    <td class="rML-main-td">default</td>
+                                    <td class="rML-main-td">formula</td>
+                                </tr>
+                                <tr class="rML-main-tr">
+                                    <td class="rML-main-td">
+                                        <span class="rML-main-td-txt">Laundry</span>
+                                    </td>
+                                    <td class="rML-main-td">Koubei</td>
+                                    <td class="rML-main-td">200</td>
+                                    <td class="rML-main-td">default</td>
+                                    <td class="rML-main-td">400</td>
+                                    <td class="rML-main-td">default</td>
+                                    <td class="rML-main-td">formula</td>
+                                </tr>
+                                <tr class="rML-main-tr">
+                                    <td class="rML-main-td">
+                                        <span class="rML-main-td-txt">Laundry</span>
+                                    </td>
+                                    <td class="rML-main-td">Koubei</td>
+                                    <td class="rML-main-td">200</td>
+                                    <td class="rML-main-td">default</td>
+                                    <td class="rML-main-td">400</td>
+                                    <td class="rML-main-td">default</td>
+                                    <td class="rML-main-td">formula</td>
+                                </tr>
+
+                            </table>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="rE-main-btnOutWrapper">
+                <div class="rE-main-btnWrapper clear">
+                    <button class="rE-main-btn" style="background-color: #98a2be;">取消</button>
+                    <button class="rE-main-btn" style="background-color: #3268ff;">确定</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script>
+    //下拉菜单
+    $(".idx-item-name-wrapper").click(function () {
+
+        $(".idx-subMenu").not($(this).siblings(".idx-subMenu")).slideUp();
+        $(this).siblings(".idx-subMenu").slideToggle();
+
+        $(".idx-item-name-wrapper").not($(this)).removeClass("slideDown");
+        $(this).toggleClass("slideDown");
+    });
+
+    //table选中
+    $(".rML-main-td-ipt").change(function () {
+        if ($(".rML-main-td-ipt:checked").length == $(".rML-main-td-ipt").length) {
+            $(".rML-main-th-ipt").prop("checked", true)
+        } else {
+            $(".rML-main-th-ipt").prop("checked", false)
+        }
+    });
+    $(".rML-main-th-ipt").change(function () {
+        if ($(".rML-main-th-ipt:checked").length > 0) {
+            $(".rML-main-td-ipt").prop("checked", true)
+        } else {
+            $(".rML-main-td-ipt").prop("checked", false)
+        }
+
+    });
+
+</script>
+<script>
+    //上传图片
+    var chooseFileIpt = document.getElementsByClassName("aCE-main-item-file")[0];
+
+    var preview = document.querySelector('.preview');
+    var msg = document.querySelector('.tk_compPicItMsg');
+    var picArr = [];
+
+    var targetImage = [];
+
+    function updateImageDisplay() {
+
+        /*msg.classList.add("none");*/
+        preview.classList.remove("none");
+        var curFiles = this.files;
+        for (var t = 0; t < curFiles.length; t++) {
+            targetImage.push(this.files[t])
+        }
+
+        var self = this;
+
+        console.log(curFiles.length);
+        if (curFiles.length === 0) {
+
+            if ($(".tk_compPicItem").length == 0) {
+                msg.classList.remove("none");
+                preview.classList.add("none");
+            }
+
+        } else if (curFiles.length > 8) {
+            /*判断数量*/
+            alert("多媒体数量不能超过8张！");
+            $(".tk_compPicItMsg").removeClass("none");
+            preview.classList.add("none");
+        } else {
+            /*判断数量*/
+            if ($(".tk_compPicItem").length + curFiles.length > 8) {
+                alert("多媒体数量不能超过8张！");
+                return;
+            } else {
+                function readAndPreview(file) {
+
+                    // Make sure `file.type` matches our extensions criteria
+                    /*if (validFileType(file)) {
+
+
+                    }*/
+                    var reader = new FileReader();
+
+                    reader.addEventListener("load", function () {
+
+                        var listItemDelete = document.createElement('div');
+                        listItemDelete.classList.add("tk_RTopPicItDelete");
+                        var listItem = document.createElement('li');
+                        listItem.classList.add("tk_compPicItem");
+
+                        /*判断文件类型*/
+                        /*if (/image\/(jpe?g|png|gif)$/i.test(file.type)) {
+
+
+                        } else {
+                            alert("只能上传图片！");
+                        }
+                        ;*/
+                        /*listItem.style.backgroundImage = "url(" + this.result + ")";*/
+                        listItem.textContent = file.name;
+
+                        picArr.push(this.result);
+                        listItem.appendChild(listItemDelete);
+                        listItem.classList.add("aCE-picItem");
+                        preview.appendChild(listItem);
+
+
+                    }, false);
+
+                    reader.readAsDataURL(file);
+
+                };
+
+                if (curFiles) {
+                    [].forEach.call(curFiles, readAndPreview);
+                }
+                ;
+                console.log(picArr);
+            }
+
+        }
+        ;
+        /*input.addEventListener('change', updateImageDisplay);*/
+    };
+
+    chooseFileIpt.addEventListener('change', updateImageDisplay);
+
+    /*var fileTypes = [
+        'image/jpeg',
+        'image/pjpeg',
+        'image/png',
+        "video/mp4",
+        "video/webm",
+        "video/ogg",
+        "audio/mpeg",
+        "audio/ogg",
+        "audio/mp3",
+        "audio/wav"
+    ];
+
+    function validFileType(file) {
+        for (var i = 0; i < fileTypes.length; i++) {
+            if (file.type === fileTypes[i]) {
+                return true;
+            }
+        }
+        return false;
+    };*/
+    /*点击提交按钮*/
+    var submitBtn = document.getElementsByClassName("rE-main-btn")[0];
+    submitBtn.addEventListener("click", doUpload);
+
+    function doUpload() {
+        /*// 实例化一个AJAX对象
+        var xhr = new XMLHttpRequest();
+
+        xhr.open("POST", "http://gdcyberway.com:8300/crm/weixin/uploadAttachment?fileCategory=imageAttachment", true);
+
+        // 发送表单数据
+        xhr.send(picArr);*/
+        var formData = new FormData($("#uploadForm")[0]);
+        formData.append('audioAttachment', targetAudio);
+        formData.append('videoAttachment', targetVideo);
+        formData.append('imageAttachment', targetImage);
+        $.ajax({
+            url: "http://gdcyberway.com:8300/crm/weixin/uploadAttachment?fileCategory=imageAttachment&callback=callback",
+            type: 'POST',
+            dataType: "JSONP",
+            data: formData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (data) {
+                alert("成功了！");
+            },
+            error: function (data) {
+                alert("失败了！");
+            }
+        });
+    };
+    /*删除图片*/
+    $(".aCE-picMenu").on("click", ".tk_RTopPicItDelete", function () {
+        var index;
+        index = $(this).parents(".tk_compPicItem").index(".tk_compPicItImg_bg");
+        console.log(index);
+        targetImage.splice(index, 1);
+
+        picArr.splice(index, 1);
+        console.log(picArr);
+        var menu = $(this).parents(".tk_compPicItem").parents(".tk_compPic");
+        $(this).parents(".tk_compPicItem").remove();
+        if ($(".tk_compPicItem").length == 0) {
+            menu.siblings(".tk_compPicItMsg").removeClass("none");
+            menu.addClass("none")
+        }
+    });
+</script>
+</body>
+</html>

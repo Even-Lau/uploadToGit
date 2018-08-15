@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="stylesheet" href="style/layout.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="login">
+    <section class="login-main">
+        <div class="login-main-content clear">
+            <img class="login-main-left fl" src="images/login-main-left.png">
+            <div class="login-main-right fr">
+                <img class="login-main-logo" src="images/login-logo.png">
+                <span class="login-main-welcome">欢迎登录</span>
+                <form class="login-main-form">
+                    <ul class="login-main-menu">
+                        <li class="login-main-item clear">
+                            <i class="login-main-icon"
+                               style="background-image: url('images/login-main-icon-user.png');"></i>
+                            <input class="login-main-ipt" type="text" name="userName" placeholder="请输入用户名">
+                        </li>
+                        <li class="login-main-item clear">
+                            <i class="login-main-icon"
+                               style="background-image: url('images/login-main-icon-password.png');"></i>
+                            <input class="login-main-ipt" type="password" name="password" placeholder="请输入密码">
+                        </li>
+                        <li class="login-main-item clear">
+                            <i class="login-main-icon"
+                               style="background-image: url('images/login-main-icon-protect.png');"></i>
+                            <input class="login-main-ipt" type="password" name="text" placeholder="请输入验证码"
+                                   style="width: 100px;">
+                            <div class="login-main-verifyWrapper">
+                                <div class="login-main-verifyVeil none"></div>
+                                <span class="login-main-verify">获取验证码</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="login-main-btn">登 录</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="login-footer">
+        <p class="login-footer-para">
+            广州宝洁有限公司版权所有<br/>技术支持：广东赛百威信息科技有限公司 联系电话：61006990 转 245<br/>
+            请使用IE6.0或以上版本的浏览器，建议分辨率 1024*768 或 1280*800
+        </p>
+
+    </footer>
+</div>
+
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<!--<script>
+    $(".login-main-verify").click(function () {
+        $(this).siblings(".login-main-verifyVeil").removeClass("none");
+        var distance = 60;
+        var self=$(this)
+        var x = setInterval(function () {
+            distance&#45;&#45;;
+            self.text(distance +" s");
+            if (distance < 0) {
+                clearInterval(x);
+                self.text("获取验证码");
+                $(".login-main-verifyVeil").addClass("none");
+            }
+        }, 1000)
+    });
+
+</script>-->
+<script>
+    var code;
+
+    var tk_logItNameVCode=document.getElementsByClassName("login-main-verify")[0];
+    changeImg();
+    tk_logItNameVCode.addEventListener('click',changeImg);
+    function changeImg() {
+        var arrays=new Array(
+            '1','2','3','4','5','6','7','8','9','0',
+            'a','b','c','d','e','f','g','h','i','j',
+            'k','l','m','n','o','p','q','r','s','t',
+            'u','v','w','x','y','z',
+            'A','B','C','D','E','F','G','H','I','J',
+            'K','L','M','N','O','P','Q','R','S','T',
+            'U','V','W','X','Y','Z'
+        );
+        code='';
+        for(var i=0;i<4;i++){
+            //随机获取一个数组的下标
+            var r=parseInt(Math.random()*arrays.length);
+            code+=arrays[r];
+        }
+        tk_logItNameVCode.innerHTML=code;
+    };
+    $(".tk_logIptV").blur(function () {
+        var val = $(".tk_logIptV").val().toLowerCase();
+        console.log(val)
+        if (val != code.toLowerCase()) {
+            $(".tk_compPopUpWrapper").removeClass("none")
+        }
+
+    });
+    $(".tk_compPopUpBtn").click(function () {
+        $(".tk_compPopUpWrapper").addClass("none")
+    })
+
+</script>
+</body>
+</html>
